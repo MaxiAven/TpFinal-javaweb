@@ -1,0 +1,56 @@
+.navmenu a{
+	color:#fff;
+}
+
+
+body{
+	background-image:url("../img/ruta.jpg") ;
+	background-size:cover;
+	color:#fff;
+}
+
+
+
+.buscador{
+	
+	margin-top:15%;
+	
+}
+
+.buscar{
+	background-color:none;
+}
+
+.textoRegistro{
+	
+	text-size:18px;
+}
+
+.reg{
+	
+	margin-top:20px;
+	
+}
+
+.reg>p{
+	
+	padding:15px;
+	color:#000;
+	border-radius:5px;
+	text-align:center;
+}
+
+.cargaRuta{
+	
+	color:#000;
+}
+
+.fondoFormulario{
+	
+	color:#000;
+<<<<<<< HEAD
+}
+
+=======
+}
+>>>>>>> e77cbbe3519a074734b472c32fa9acbb05c28d9d
