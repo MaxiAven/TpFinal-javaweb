@@ -1,20 +1,24 @@
 <%@ include file="header.jsp" %>
 	 	<div class="container">
-	 	<div class="col-lg-4"></div>
-	 	<div class="col-lg-4">
+	 	<div class="col-lg-2"></div>
+	 	<div class="col-lg-8">
 	 	<div class="panel panel-default">
 	 	<div class="panel-heading">Carga tu Viaje</div>
 	 	<div class="panel-body cargaRuta">
-			
 			<form:form action="cargar-viaje" method="POST" modelAttribute="viaje">
+			<div class="col-lg-4">
   			<div class="form-group">
     			<label for="salida">Salida:</label>
     			<input type="text" class="form-control" name="salida" id="salida">
   			</div>
+  			</div>
+  			<div class="col-lg-4">
   			<div class="form-group">
    				 <label for="llegada">Llegada</label>
     			 <input type="text" class="form-control" name="llegada" id="llegada">
   			</div>
+  			</div>
+  			<div class="col-lg-4">
   			<div class="form-group">
 
    				 <label for="llegada">Tipo De Destino:</label>
@@ -27,6 +31,8 @@
    				 	</select>
    				
    			</div>
+   			</div>
+   			<div class="col-lg-4">
   			<div class="form-group">
    				 <label for="llegada">Tipo Hospedaje:</label>
    				 	<select class="form-control" name="tipoHospedaje" id="tipoHospedaje">
@@ -53,7 +59,8 @@
    				 </select>
 
    			</div>
-   		
+   			</div>
+   			<div class="col-lg-4">
    			<div class="form-group">
    				 <label for="llegada">Cantidad de días:</label>
 
@@ -70,6 +77,8 @@
 
    				 </select>-->
    			</div>
+   			</div>
+   			<div class="col-lg-4">
    			<div class="form-group">
    				 <label for="llegada">Cantidad de personas:</label>
    				 <input type="text" class="form-control" name="cantidadPersonas" id="cantidadPersonas">
@@ -88,13 +97,15 @@
 
    				 </select>-->
 
-   				
-
    			</div>
+   			</div>
+   			<div class="col-lg-6">
    			<div class="form-group">
     			<label for="precio">Precio:</label>
     			<input type="text" class="form-control" name="precio" id="precio">
   			</div>
+  			</div>
+  			<div class="col-lg-6">
   			<div class="form-group">
 
     			<label for="calificacion">Calificación del Viaje:</label>
@@ -102,6 +113,8 @@
     				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="0">
     			</div>
   			</div> 
+  			</div>
+  			<div class="col-lg-12">
   			<div class="form-group">
 
     			<label for="descripcion">Comentario:</label>
@@ -110,11 +123,12 @@
     			 
   			
   				<button type="submit" class="btn btn-default">Cargar Viaje</button>
+  				</div>
   			</form:form>
 		</div>
 		</div>
 		</div>
-		<div class="col-lg-4"></div>
+		<div class="col-lg-2"></div>
 		</div>
 	
 		<!-- Placed at the end of the document so the pages load faster -->
