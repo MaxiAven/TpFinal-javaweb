@@ -4,6 +4,9 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
+import org.hibernate.criterion.Restrictions;
+import org.hsqldb.Session;
+import org.hsqldb.SessionData;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioRuta;
-
+import org.hibernate.Criteria;
 @Controller
 public class ControladorIndex {
 	
@@ -34,10 +36,12 @@ public class ControladorIndex {
 	}
 	
 	@RequestMapping(path="/listaResultado")
-	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("precio") float precio){
+	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("precio") float precio, @RequestParam("lugar") String lugar ){
 		
 		ModelAndView mav = new ModelAndView("resultado");
 		List<Viaje> listado = servicioRuta.buscarPorPrecioYDestino(precio);
+
+		
 		mav.addObject("lista", listado);
 		return mav;
 	}
