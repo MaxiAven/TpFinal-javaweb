@@ -17,12 +17,12 @@
 		<div class="container-fluid">
     	<!-- Brand and toggle get grouped for better mobile display -->
     		<div class="navbar-header">
-      			<a class="navbar-brand" href="/TpFinal-tallerweb1/">manejate.com</a>
+      			<a class="navbar-brand" href="/TpFinal-java/">manejate.com</a>
     		</div>
     		 <ul class="nav navbar-nav navbar-right">
-        		<li><a href="#">Ingresar</a></li>
-        		<li><a href="#">Registrate</a></li>
-        		<li><a href="/TpFinal-tallerweb1/cargarRuta">Compartí tus viajes</a></li>
+        		<li><a href="login">Ingresar</a></li>
+        		<li><a href="registro">Registrate</a></li>
+        		<li><a href="cargarViaje">Compartí tus viajes</a></li>
         		
        		</ul>
     	</div>
