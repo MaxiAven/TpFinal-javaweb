@@ -13,10 +13,15 @@ public class Hospedaje {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idHospedaje;
+	private String nombre;
 	private String descripcion;
 	private String tipoHospedaje;
+	private String ubicacion;
 	private float precio;
-	private int cantPersonas;
+	private String img1;
+	private String img2;
+	private String img3;
+
 
 	
 	@ManyToOne
@@ -54,12 +59,40 @@ public class Hospedaje {
 	public void setTipoHospedaje(String tipoHospedaje) {
 		this.tipoHospedaje = tipoHospedaje;
 	}
-	public int getCantPersonas() {
-		return cantPersonas;
+
+	public String getNombre() {
+		return nombre;
 	}
-	public void setCantPersonas(int cantPersonas) {
-		this.cantPersonas = cantPersonas;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
+
+	public String getImg1() {
+		return img1;
+	}
+	public void setImg1(String img1) {
+		this.img1 = img1;
+	}
+	public String getImg2() {
+		return img2;
+	}
+	public void setImg2(String img2) {
+		this.img2 = img2;
+	}
+	public String getImg3() {
+		return img3;
+	}
+	public void setImg3(String img3) {
+		this.img3 = img3;
+	}
+	public String getUbicacion() {
+		return ubicacion;
+	}
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+	
+	
 	
 
 }
