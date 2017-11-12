@@ -18,15 +18,14 @@
 					    		  
 					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/>Ingresar</button>
 				</form:form>
-
-				<%--Bloque que es visible si el elemento error no está vacío	--%>
-				<c:if test="${not empty error}">
-			        <h4><span>${error}</span></h4>
-			        <br>
-		        </c:if>	
 	 			</div>
 	 	</div>
+	 	<c:if test="${not empty error}">
+			        <div class="alert alert-danger" role="alert">${error}</div>
+			        <br>
+		        </c:if>	
 		</div>
+		
 		<div class="col-lg-3"></div>
 			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				<%--Definicion de un form asociado a la accion /validar-login por POST. Se indica ademas que el model attribute se--%>

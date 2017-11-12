@@ -12,22 +12,7 @@
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	</head>
 	<body>
-		
-	<nav class="navbar navmenu">
-		<div class="container-fluid">
-    	<!-- Brand and toggle get grouped for better mobile display -->
-    		<div class="navbar-header">
-      			<a class="navbar-brand" href="/TpFinal-java/">manejate.com</a>
-    		</div>
-    		
-       		<ul class="nav navbar-nav navbar-right">
-        		<li><a href="login">Ingresar</a></li>
-        		<li><a href="registroUsuario">Registrate</a></li>
-        		<li><a href="cargarViaje">Compartí tus viajes</a></li>
-       		</ul>
-       		
-    	</div>
-	</nav>
-	
-	</body>
-	</html>
+	<%@ include file="menuPanel.jsp" %>
+
+</body>
+</html>

@@ -19,12 +19,7 @@
     		 <div class="col-lg-2">
     		 	<input type="submit" class="btn btn-default btn-lg" value="Buscar">
     		 </div>
-    		 
-    		 <!--  <div class="col-lg-12 reg">
-    			<p class="bg-info">
-    				Compartí tus viajes <a href="#">registrandote</a> acá
-    			</p>
-    		</div>-->
+    	
     		</div>
     		</form:form>
     		<div class="col-lg-1"></div>
