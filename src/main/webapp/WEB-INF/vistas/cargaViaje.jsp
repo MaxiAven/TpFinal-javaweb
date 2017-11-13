@@ -13,7 +13,7 @@
 	</head>
 	<body>
 <!-- menu que el usuario al logearse -->
-	<%@ include file="menuPanel.jsp" %>
+<%@ include file="header.jsp" %>
 	
 	 	<div class="container">
 	 	<div class="col-lg-2"></div>
@@ -41,7 +41,7 @@
    				 	<select class="form-control" name="tipoDestino" id="tipoDestino">
    				 		<option value="">Seleccione un Destino</option>
    				 		<option value="playa">Playa</option>
-   				 		<option value="montaña">Montaña</option>
+   				 		<option value="montana">Montaña</option>
    				 		<option value="ciudad">Ciudad</option>
    				 		<option value="otros">Otros</option>
    				 	</select>
