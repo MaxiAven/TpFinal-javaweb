@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: Administrador
+=======
+Built-By: HIGGE
+>>>>>>> 90d6533582cbf5245b544b5db0d30413f643593b
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 

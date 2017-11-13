@@ -24,7 +24,7 @@ public class ControladorRegistro {
 		return new ModelAndView("registroUsuario");
 	}
 	
-	@RequestMapping(path="/registrar-usuario", method=RequestMethod.POST)
+	@RequestMapping(path="/registrar-Usuario", method=RequestMethod.POST)
 	public ModelAndView registrarUsuario(@ModelAttribute("usuario") Usuario usuario, HttpServletRequest request){
 	
 		servicioRegistro.registrarUsuario(usuario);
