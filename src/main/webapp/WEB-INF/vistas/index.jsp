@@ -11,9 +11,10 @@
     		 
     		 	<select class="form-control input-lg" name=lugar>
     		 		<option>Elegí tu lugar</option>
-    		 		<option value=dd>Playa</option>
+    		 		<option value=playa>Playa</option>
     		 		<option value=montana>Montaña</option>
     		 		<option value=ciudad>Ciudad</option>
+    		 		<option value="otros">Otros</option>
     		 	</select>
     		 </div>
     		 <div class="col-lg-2">

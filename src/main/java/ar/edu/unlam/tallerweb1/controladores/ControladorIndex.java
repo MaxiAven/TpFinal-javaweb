@@ -62,11 +62,7 @@ public class ControladorIndex {
 		
 		return new ModelAndView("cargaViaje");
 	}
-	@RequestMapping(path="registroUsuario", method=RequestMethod.GET)
-	public ModelAndView registro(){
-		
-		return new ModelAndView("registroUsuario");
-	}
+	
 	
 	
 }
