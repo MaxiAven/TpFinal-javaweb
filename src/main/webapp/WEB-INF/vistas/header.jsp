@@ -10,6 +10,8 @@
 	    <link href="css/style.css" rel="stylesheet" >
 	    <!-- Bootstrap theme -->
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	    <link rel="shortcut icon"  href="src/main/webapp/img/logo.png"type="image/x-icon" />
+	    <title>Manejate.com</title>
 	</head>
 	<body>
 		
@@ -17,7 +19,7 @@
 		<div class="container-fluid">
     	<!-- Brand and toggle get grouped for better mobile display -->
     		<div class="navbar-header">
-      			<a class="navbar-brand" href="/TpFinal-java/">manejate.com</a>
+      			<a class="navbar-brand" href="/TpFinal-java/"><img src=img/manejate.png width=150></a>
     		</div>
     		
        		<ul class="nav navbar-nav navbar-right">
