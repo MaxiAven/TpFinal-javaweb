@@ -13,7 +13,7 @@
 	</head>
 	<body>
 <!-- menu que el usuario al logearse -->
-<%@ include file="header.jsp" %>
+<%@ include file="menuPanel.jsp" %>
 	
 	 	<div class="container">
 	 	<div class="col-lg-2"></div>
