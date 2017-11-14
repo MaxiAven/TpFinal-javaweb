@@ -10,7 +10,7 @@
 	    <link href="css/style.css" rel="stylesheet" >
 	    <!-- Bootstrap theme -->
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	    <link rel="shortcut icon"  href="src/main/webapp/img/logo.png"type="image/x-icon" />
+	    <link rel="shortcut icon"  href="img/logo.png"type="image/x-icon" />
 	    <title>Manejate.com</title>
 	</head>
 	<body>

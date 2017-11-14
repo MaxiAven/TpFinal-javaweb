@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> b983602737252601d156373b86b6793303fcbdd1
 <%@ include file="header.jsp" %>
 	 	<div class="container">
 	 	<div class="col-lg-4"></div>
@@ -57,3 +61,7 @@
 		}
 		</script>
 		
+<<<<<<< HEAD
+=======
+
+>>>>>>> b983602737252601d156373b86b6793303fcbdd1

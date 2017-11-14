@@ -24,3 +24,5 @@ hs_err_pid*
 target/classes/META-INF/MANIFEST.MF
 target/classes/META-INF/MANIFEST.MF
 target/classes/META-INF/maven/TpFinal-java/TpFinal-java/pom.properties
+target/classes/hibernateContext.xml
+target/classes/META-INF/maven/TpFinal-java/TpFinal-java/pom.properties
