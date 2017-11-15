@@ -32,8 +32,13 @@
    		 <input type="password" placeholder="" class="form-control" name="rpassword" id="rpassword" required>
   			</div>
   			
-  				<button type="submit" class="btn btn-default" >Registrarme</button>
-  			</form:form>
+  				<button type="submit" class="btn btn-default" id="registrar" >Registrarme</button>
+  			</form:form><br>
+  			 <c:if test="${not empty registroOk}">
+			        <div class="alert alert-success" role="alert">${registroOk}</div>
+			        <br>
+		        </c:if>	
+  			
 		</div>
 		</div>
 		</div>
@@ -55,5 +60,9 @@
 			   
 		}
 		}
+		
+		
+		
+			
 		</script>
 		
