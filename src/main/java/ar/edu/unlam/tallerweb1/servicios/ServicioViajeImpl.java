@@ -7,9 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.edu.unlam.tallerweb1.dao.HospedajeDao;
 import ar.edu.unlam.tallerweb1.dao.ViajeDao;
-import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 
 

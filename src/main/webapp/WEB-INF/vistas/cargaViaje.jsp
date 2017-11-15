@@ -37,8 +37,8 @@
   			<div class="col-lg-4">
   			<div class="form-group">
 
-   				 <label for="llegada">Tipo De Destino:</label>
-   				 	<select class="form-control" name="tipoDestino" id="tipoDestino">
+   				 <label for="lugar">Tipo De Destino:</label>
+   				 	<select class="form-control" name="lugar" id="lugar">
    				 		<option value="">Seleccione un Destino</option>
    				 		<option value="playa">Playa</option>
    				 		<option value="montana">Montaña</option>
@@ -99,7 +99,7 @@
    			<div class="col-lg-4">
    			<div class="form-group">
    				 <label for="llegada">Cantidad de personas:</label>
-   				 <input type="numreic" class="form-control" name="cantidadPersonas" id="cantidadPersonas">
+   				 <input type="number" class="form-control" name="cantidadPersonas" id="cantidadPersonas">
    				 <!-- <select class="form-control" name="cantidadPersonas" id="cantidadPersonas">
 
    				 </select>
@@ -120,7 +120,7 @@
    			<div class="col-lg-6">
    			<div class="form-group">
     			<label for="precio">Precio:</label>
-    			<input type="numeric" class="form-control" name="precio" id="precio">
+    			<input type="number" class="form-control" name="precio" id="precio">
   			</div>
   			</div>
   			<div class="col-lg-6">

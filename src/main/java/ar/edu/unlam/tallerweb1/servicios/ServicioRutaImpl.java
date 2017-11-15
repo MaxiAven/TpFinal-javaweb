@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.unlam.tallerweb1.dao.RutaDao;
-import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
+
+
 
 import ar.edu.unlam.tallerweb1.modelo.Ruta;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
@@ -28,9 +29,9 @@ public class ServicioRutaImpl implements ServicioRuta{
 	}
 	
 	@Override
-	public List<Viaje> buscarPorPrecioYDestino(float precio) {
+	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar) {
 		
-		return servicioRutaDao.buscarPorPrecioYDestino(precio);
+		return servicioRutaDao.buscarPorPrecioYDestino(precio, lugar);
 	}
 	
 	@Override

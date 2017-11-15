@@ -1,6 +1,4 @@
 package ar.edu.unlam.tallerweb1.controladores;
-import java.util.List;
-
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
-import ar.edu.unlam.tallerweb1.modelo.Ruta;
-import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioHospedaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioRuta;
 

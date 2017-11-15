@@ -6,7 +6,8 @@ import javax.inject.Inject;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.LogicalExpression;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -30,10 +31,17 @@ public class RutaDaoImpl implements RutaDao{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Viaje> buscarPorPrecioYDestino(float precio) {
+	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar) {
+//		return null;
 		final Session session = sessionFactory.getCurrentSession();
-		return session.createCriteria(Viaje.class).add(Restrictions.le("precio", precio)).list();
-
+//		return session.createCriteria(Viaje.class).add(Restrictions.le("precio", precio)).list();
+		Criterion precio1 = Restrictions.le("precio",precio);
+		Criterion lugar1 = Restrictions.like("lugar",lugar);
+		LogicalExpression orExp = Restrictions.or(precio1,lugar1);
+		return session.createCriteria(Viaje.class).add(orExp).list();
+		
+//		crit.add(orExp);
+//		List results = crit.list(); 
 	}
 	
 	@Override

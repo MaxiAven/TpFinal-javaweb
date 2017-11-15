@@ -10,8 +10,10 @@ public interface RutaDao {
 	
 	public void agregarViaje(Viaje viaje);
 	
-	public List<Viaje> buscarPorPrecioYDestino(float precio);
+	//public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar);
 	
 	Ruta consultarRutaPorId(Long id);
+
+	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar);
 
 }
