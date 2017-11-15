@@ -25,7 +25,6 @@
        		<ul class="nav navbar-nav navbar-right">
         		<li><a href="login">Ingresar</a></li>
         		<li><a href="registroUsuario">Registrate</a></li>
-        		<li><a href="cargarViaje">Compartí tus viajes</a></li>
        		</ul>
        		
     	</div>
