@@ -48,7 +48,10 @@
    				
    			</div>
    			</div>
-   			<div class="col-lg-4">
+   			
+ <!-- Comento TIPO HOSPEDAJE -->
+ 
+   			<!--  <div class="col-lg-4">
   			<div class="form-group">
    				 <label for="llegada">Tipo Hospedaje:</label>
    				 	<select class="form-control" name="tipoHospedaje" id="tipoHospedaje">
@@ -70,12 +73,11 @@
    				 	</c:forEach>
    				 	
 
-   				 </select> -->
+   				 </select> 
 
-   				 </select>
 
    			</div>
-   			</div>
+   			</div> -->
    			<div class="col-lg-4">
    			<div class="form-group">
    				 <label for="llegada">Cantidad de días:</label>
@@ -136,11 +138,53 @@
     			<label for="descripcion">Comentario:</label>
     			<textarea class="form-control" name="descripcion" id="descripcion"></textarea>
   			</div>
+  			
+  			    <script type="text/javascript">
+            function toggle(elemento) {
+                   if(elemento.value=="si"){
+                       document.getElementById("uno").style.display = "block";
+                       document.getElementById("dos").style.display = "none";
+                   }else{
+                       if(elemento.value=="no"){
+                           document.getElementById("uno").style.display = "none";
+                           document.getElementById("dos").style.display = "block";
+                       }  
+                   }
+                }
+            
+    </script>
+    
+    
+    
+        <div class="form-group">
+        <dl>
+            <dt><label for="tieneHospedaje">Quiere contarnos su hospedaje?</label></dt>
+            <dd>
+                <input type="radio" name="tieneHospedaje" onclick="toggle(this)" value="si" > Quiero aportar información de un Hospedaje Turístico<br>
+                <input type="radio" name="tieneHospedaje" onclick="toggle(this)" value="no"> No, gracias!<br>
+            </dd>
+        </dl>
+    </div>
+    
+    </form:form>
+     
+    <div id="uno" style="display:none">
+    		
+    	
+    		<button class="btn btn-primary" type="submit" onClick="window.open('/TpFinal-java/cargarHospedaje')">Cargar mi Viaje y deseo cargar Hospedaje</button>
+    </div>
+    
+      <div id="dos" style="display:none">
+    		<button class="btn btn-primary" type="submit">Cargar sólo mi Viaje</button>
+    </div>
+    
     			 
   			
-  				<button type="submit" class="btn btn-default">Cargar Viaje</button>
-  				</div>
-  			</form:form>
+					
+					<button class="btn btn-default" type="reset">Limpiar todo</button>
+				
+  				
+  			
 		</div>
 		</div>
 		</div>
