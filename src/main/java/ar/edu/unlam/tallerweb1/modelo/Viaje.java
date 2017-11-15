@@ -15,12 +15,12 @@ public class Viaje {
 	private String salida;
 	private String llegada;
 	private String tipoDestino;
-	private String tipoHospedaje;
 	private int cantidadDias;
 	private int cantidadPersonas;
 	private int calificacion;
 	private float precio;
     private String descripcion;
+    private String tieneHospedaje;
     
    
 	@OneToOne
@@ -56,12 +56,6 @@ public class Viaje {
 	}
 	
 
-	public String getTipoHospedaje() {
-		return tipoHospedaje;
-	}
-	public void setTipoHospedaje(String tipoHospedaje) {
-		this.tipoHospedaje = tipoHospedaje;
-	}
 	public int getCantidadDias() {
 		return cantidadDias;
 	}
@@ -101,6 +95,12 @@ public class Viaje {
 	}
 	public void setHospedaje(Hospedaje hospedaje) {
 		this.hospedaje = hospedaje;
+	}
+	public String getTieneHospedaje() {
+		return tieneHospedaje;
+	}
+	public void setTieneHospedaje(String tieneHospedaje) {
+		this.tieneHospedaje = tieneHospedaje;
 	}
     
 }
