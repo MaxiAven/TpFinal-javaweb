@@ -53,6 +53,12 @@ public class ControladorLogin {
 	public ModelAndView irAHome() {
 		return new ModelAndView("home");
 	}
+	
+	@RequestMapping(path = "/logout")
+	public ModelAndView logout(HttpServletRequest request) {
+			request.getSession().invalidate();
+		return new ModelAndView("redirect:/");
+	}
 
 	
 }

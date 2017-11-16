@@ -9,7 +9,7 @@
        		<ul class="nav navbar-nav navbar-right">
        			<li><a href="#"><strong>Bienvenido, ${nombre}</strong></a></li>
         		<li><a href="cargarViaje">Cargá tu viaje</a></li>
-        		<li><a href="#">Salir</a></li>
+        		<li><a href="/TpFinal-java/logout">Salir</a></li>
        		</ul>
     	</div>
 	</nav>
