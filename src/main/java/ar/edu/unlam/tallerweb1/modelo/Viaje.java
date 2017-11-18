@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Viaje {
@@ -12,96 +11,41 @@ public class Viaje {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idViaje;
-	private String salida;
-	private String llegada;
-	private String lugar;
-	private int cantidadDias;
-	private int cantidadPersonas;
-	private int calificacion;
-	private float precio;
-    private String descripcion;
-    private String tieneHospedaje;
-    
-   
-	@OneToOne
-    private Hospedaje hospedaje;
-    
+	private String nombre;
+	private String img1;
+	private String img2;
+	private String img3;
+
+	
 	public Long getIdViaje() {
 		return idViaje;
 	}
 	public void setIdViaje(Long idViaje) {
 		this.idViaje = idViaje;
 	}
-	public String getSalida() {
-		return salida;
+	public String getNombre() {
+		return nombre;
 	}
-	public void setSalida(String salida) {
-		this.salida = salida;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
-	public String getLlegada() {
-		return llegada;
+	public String getImg1() {
+		return img1;
 	}
-	public void setLlegada(String llegada) {
-		this.llegada = llegada;
+	public void setImg1(String img1) {
+		this.img1 = img1;
+	}
+	public String getImg2() {
+		return img2;
+	}
+	public void setImg2(String img2) {
+		this.img2 = img2;
+	}
+	public String getImg3() {
+		return img3;
+	}
+	public void setImg3(String img3) {
+		this.img3 = img3;
 	}
 
-
-	public void setPrecio(float precio) {
-		this.precio = precio;
-	}
-	
-
-	public int getCantidadDias() {
-		return cantidadDias;
-	}
-	public void setCantidadDias(int cantidadDias) {
-		this.cantidadDias = cantidadDias;
-	}
-	public int getCantidadPersonas() {
-		return cantidadPersonas;
-	}
-	public void setCantidadPersonas(int cantidadPersonas) {
-		this.cantidadPersonas = cantidadPersonas;
-	}
-	public float getPrecio() {
-		return precio;
-	}
-	public void setPrecio(int precio) {
-		this.precio = precio;
-	}
-	
-	 
-    public int getCalificacion() {
-		return calificacion;
-	}
-	public void setCalificacion(int calificacion) {
-		this.calificacion = calificacion;
-	}
-    
-	
-	public String getDescripcion() {
-		return descripcion;
-	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	public Hospedaje getHospedaje() {
-		return hospedaje;
-	}
-	public void setHospedaje(Hospedaje hospedaje) {
-		this.hospedaje = hospedaje;
-	}
-	public String getTieneHospedaje() {
-		return tieneHospedaje;
-	}
-	public void setTieneHospedaje(String tieneHospedaje) {
-		this.tieneHospedaje = tieneHospedaje;
-	}
-	public String getLugar() {
-		return lugar;
-	}
-	public void setLugar(String lugar) {
-		this.lugar = lugar;
-	}
-    
 }

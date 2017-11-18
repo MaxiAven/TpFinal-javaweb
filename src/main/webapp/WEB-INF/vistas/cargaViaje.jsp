@@ -21,7 +21,7 @@
 	 	<div class="panel panel-default">
 	 	<div class="panel-heading">Carga tu Viaje</div>
 	 	<div class="panel-body cargaRuta">
-			<form:form action="cargar-viaje" method="POST" modelAttribute="viaje">
+			<form:form action="cargar-transporte" method="POST" modelAttribute="transporte">
 			<div class="col-lg-4">
   			<div class="form-group">
     			<label for="salida">Salida:</label>
@@ -34,21 +34,18 @@
     			 <input type="text" class="form-control" name="llegada" id="llegada">
   			</div>
   			</div>
-  			<div class="col-lg-4">
+  			
   			<div class="form-group">
-
-   				 <label for="lugar">Tipo De Destino:</label>
+   				 <label for="llegada">Elegi tu destino:</label>
    				 	<select class="form-control" name="lugar" id="lugar">
-   				 		<option value="">Seleccione un Destino</option>
+   				 		<option value="">Seleccione una opción</option>
    				 		<option value="playa">Playa</option>
    				 		<option value="montana">Montaña</option>
    				 		<option value="ciudad">Ciudad</option>
+   				 		<option value="bosque">Bosque</option>
    				 		<option value="otros">Otros</option>
    				 	</select>
-   				
-   			</div>
-   			</div>
-   			
+  			</div>
  <!-- Comento TIPO HOSPEDAJE -->
  
    			<!--  <div class="col-lg-4">
@@ -78,45 +75,8 @@
 
    			</div>
    			</div> -->
-   			<div class="col-lg-4">
-   			<div class="form-group">
-   				 <label for="llegada">Cantidad de días:</label>
-
-   				 <input type="text" class="form-control" name="cantidadDias" id="cantidadDias">
-   				 <!--<select class="form-control" name="cantidadDias" id="cantidadDias">
-
-   				 <select class="form-control" name="cantidadDias" id="cantidadDias">
-
-   				 	<option value="">Seleccione una opción</option>
-   				 		<option value="4">4</option>
-   				 		<option value="7">7</option>
-   				 		<option value="15">15</option>
-   				 		<option value="30">30</option>
-
-   				 </select>-->
-   			</div>
-   			</div>
-   			<div class="col-lg-4">
-   			<div class="form-group">
-   				 <label for="llegada">Cantidad de personas:</label>
-   				 <input type="number" class="form-control" name="cantidadPersonas" id="cantidadPersonas">
-   				 <!-- <select class="form-control" name="cantidadPersonas" id="cantidadPersonas">
-
-   				 </select>
-   			</div>
-   			<div class="form-group">
-   				 <label for="llegada">Cantidad de personas:</label>
-   				 <select class="form-control" name="cantidadPersonas" id="cantidadPersonas">
-
-   				 	<option value="">Seleccione una opción</option>
-   				 		<option value="2">2</option>
-   				 		<option value="3">3</option>
-   				 		<option value="5">5</option>
-
-   				 </select>-->
-
-   			</div>
-   			</div>
+   			
+   			
    			<div class="col-lg-6">
    			<div class="form-group">
     			<label for="precio">Precio:</label>

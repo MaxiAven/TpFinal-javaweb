@@ -12,6 +12,7 @@ import ar.edu.unlam.tallerweb1.dao.RutaDao;
 
 
 import ar.edu.unlam.tallerweb1.modelo.Ruta;
+import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 
 @Service("servicioRuta")
@@ -38,6 +39,12 @@ public class ServicioRutaImpl implements ServicioRuta{
 	public Ruta consultarRutaPorId(Long id) {
 		
 		return servicioRutaDao.consultarRutaPorId(id);
+	}
+
+	@Override
+	public void agregarViaje(Transporte transporte) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

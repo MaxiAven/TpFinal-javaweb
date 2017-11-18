@@ -16,10 +16,11 @@
 		<c:forEach items ="${lista}" var= "lista">
 		<tr>
 			<td>${lista.getSalida()} - ${lista.getLlegada()}</td>
-			<td>${lista.getCantidadPersonas()}</td>
-			<td>${lista.getCantidadDias()}</td>
 			<td>${lista.getDescripcion()}</td>
 			<td>${lista.getPrecio()}</td>
+			<td>${lista.getLugar()}</td>
+			
+			
 		</tr>
 		</c:forEach>
 	</table>

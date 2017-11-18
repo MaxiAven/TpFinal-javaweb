@@ -11,14 +11,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioRuta;
+import ar.edu.unlam.tallerweb1.servicios.ServicioTransporte;
 @Controller
 public class ControladorIndex {
 	
 	@Inject
 	private ServicioRuta servicioRuta;
+	
+	@Inject
+	private ServicioTransporte servicioTransporte;
 	
 	@Inject
 	private ServicioViaje servicioViaje;
@@ -35,7 +40,7 @@ public class ControladorIndex {
 	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("lugar") String lugar ,@RequestParam("precio") float precio ){
 		
 		ModelAndView mav = new ModelAndView("resultado");
-		List<Viaje> listado = servicioRuta.buscarPorPrecioYDestino(precio,lugar);
+		List<Transporte> listado = servicioTransporte.buscarPorPrecioYDestino(precio,lugar);
 		mav.addObject("lista", listado);
 		return mav;
 	}
@@ -48,10 +53,10 @@ public class ControladorIndex {
 		return mav;
 	}
 	
-	@RequestMapping(path = "/cargar-viaje", method = RequestMethod.POST)
-	public ModelAndView cargarViaje(@ModelAttribute("viaje") Viaje viaje, HttpServletRequest request) {
+	@RequestMapping(path = "/cargar-transporte", method = RequestMethod.POST)
+	public ModelAndView cargarTransporte(@ModelAttribute("transporte") Transporte transporte, HttpServletRequest request) {
 		
-			servicioRuta.agregarViaje(viaje);
+			servicioTransporte.agregarTransporte(transporte);
 		
 		
 		return new ModelAndView("cargaViaje");
