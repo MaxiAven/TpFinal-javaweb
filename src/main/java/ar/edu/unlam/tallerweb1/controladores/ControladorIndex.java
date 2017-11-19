@@ -45,10 +45,10 @@ public class ControladorIndex {
 		return mav;
 	}
 	
-	//Metodo para la carga de viajes 
-	@RequestMapping(path="/cargarViaje", method=RequestMethod.GET)
+	//Metodo para la carga del traslado 
+	@RequestMapping(path="/cargarTransporte", method=RequestMethod.GET)
 	public ModelAndView cargaViaje(){
-		ModelAndView mav = new ModelAndView("cargaViaje");
+		ModelAndView mav = new ModelAndView("cargaTransporte");
 		mav.addObject("listaViaje", servicioViaje.listarTipoViaje());
 		return mav;
 	}
@@ -59,7 +59,7 @@ public class ControladorIndex {
 			servicioTransporte.agregarTransporte(transporte);
 		
 		
-		return new ModelAndView("cargaViaje");
+		return new ModelAndView("cargaTransporte");
 	}
 	
 	

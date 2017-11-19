@@ -10,14 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
+import ar.edu.unlam.tallerweb1.modelo.Viaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
+import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
 
 @Controller
 public class ControladorLogin {
 
 	@Inject
 	private ServicioLogin servicioLogin;
+	@Inject
+	private ServicioViaje servicioViaje;
 
 	@RequestMapping("/login")
 	public ModelAndView irALogin() {
@@ -45,13 +50,24 @@ public class ControladorLogin {
 	}
 
 	
-	public void setServicioLogin(ServicioLogin servicioLogin) {
-		this.servicioLogin = servicioLogin;
-	}
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {
 		return new ModelAndView("home");
+	}
+	
+	//meotdo para mostrar vista de cargade viaje
+	@RequestMapping(path="/cargarViaje" ,method = RequestMethod.GET)
+	public ModelAndView cargaViaje(HttpServletRequest request) {
+		
+	return new ModelAndView("cargaViaje");
+}
+	
+	@RequestMapping(path="/cargar-viaje", method = RequestMethod.POST)
+	public ModelAndView cargarViaje(@ModelAttribute("viaje") Viaje viaje, HttpServletRequest request)
+	{
+		servicioViaje.agregarViaje(viaje);
+		return new ModelAndView("cargaViaje");
 	}
 	
 	@RequestMapping(path = "/logout")
@@ -60,5 +76,7 @@ public class ControladorLogin {
 		return new ModelAndView("redirect:/");
 	}
 
-	
+	public void setServicioLogin(ServicioLogin servicioLogin) {
+		this.servicioLogin = servicioLogin;
+	}
 }
