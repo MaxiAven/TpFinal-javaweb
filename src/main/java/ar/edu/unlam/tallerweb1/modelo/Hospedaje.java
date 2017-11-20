@@ -21,17 +21,6 @@ public class Hospedaje {
 	
 
 	
-	@ManyToOne
-	@JoinColumn(name="id_viaje")
-	private Viaje viaje;
-	
-	
-	public Viaje getViaje() {
-		return viaje;
-	}
-	public void setViaje(Viaje viaje) {
-		this.viaje = viaje;
-	}
 	public Long getIdHospedaje() {
 		return idHospedaje;
 	}

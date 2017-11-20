@@ -1,11 +1,14 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -19,14 +22,19 @@ public class Usuario {
 	private String password;
 	private String rol;
 	
-	   @ManyToOne 
-		@JoinColumn (name = "id_viaje")
-		private Viaje viaje;
+//	   @ManyToOne 
+//		@JoinColumn (name = "id_viaje")
+//		private Viaje viaje;
 	
-	public Viaje getViaje() {
+	 @OneToMany
+	 @JoinColumn (name = "id_usuario")
+	  private List<Viaje> viaje;
+	
+	
+	public List<Viaje> getViaje() {
 		return viaje;
 	}
-	public void setViaje(Viaje viaje) {
+	public void setViaje(List<Viaje> viaje) {
 		this.viaje = viaje;
 	}
 	public Long getId() {

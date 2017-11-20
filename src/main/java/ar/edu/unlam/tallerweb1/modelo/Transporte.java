@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Transporte {
@@ -20,17 +18,7 @@ public class Transporte {
     private String descripcion;
    
     
-    @ManyToOne 
-	@JoinColumn (name = "id_viaje")
-	private Viaje viaje;
-
-	public Long getIdViaje() {
-		return idViaje;
-	}
-
-	public void setIdViaje(Long idViaje) {
-		this.idViaje = idViaje;
-	}
+  
 
 	public String getSalida() {
 		return salida;
@@ -79,12 +67,14 @@ public class Transporte {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
-	public Viaje getViaje() {
-		return viaje;
+
+	public Long getIdViaje() {
+		return idViaje;
 	}
 
-	public void setViaje(Viaje viaje) {
-		this.viaje = viaje;
+	public void setIdViaje(Long idViaje) {
+		this.idViaje = idViaje;
 	}
+	
+	
 }
