@@ -51,6 +51,42 @@
 <!-- 						data-preview-file-type="any" required> -->
 <!-- 				</div> -->
 
+<div class="form-group">
+					<label for="servicios" >Qué servicios ofrece?</label>
+					
+					
+					<label class="form-control">
+				  		<input type="checkbox" name="servicios" value="wifi"> Wi-Fi
+					</label>
+					<label class="form-control">
+					    <input type="checkbox" name="servicios" value="calefaccion"> Calefacción
+					</label>
+					<label class="form-control">
+					    <input type="checkbox" name="servicios" value="estacionamiento"> Estacionamiento
+					</label>
+						<label class="form-control">
+					    <input type="checkbox" name="servicios" value="tv"> Tv
+					</label>
+						<label class="form-control">
+					    <input type="checkbox" name="servicios" value="aire"> Aire Acondicionado
+					</label>
+						
+						<label class="form-control">
+					    <input type="checkbox" name="servicios" value="mascotasOK"> Pet Friendly
+					</label>
+						<label class="form-control">
+					    <input type="checkbox" name="servicios" value="blanqueria"> Blanquería
+					</label>
+						<label class="form-control">
+					    <input type="checkbox" name="servicios" value="parrilla"> Parrilla
+					</label>
+					
+							<div class="form-group">
+					<label class="form-control">Otros:
+					<input type="text" name="servicios" id="servicios">
+					</label>
+				</div>
+
 
 
 				<button type="submit" class="btn btn-default">Cargar

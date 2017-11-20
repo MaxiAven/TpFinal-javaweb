@@ -1,7 +1,9 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +17,7 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long idUsuario;
 	private String nombre;
 	private String apellido;
 	private String email;
@@ -26,24 +28,17 @@ public class Usuario {
 //		@JoinColumn (name = "id_viaje")
 //		private Viaje viaje;
 	
-	 @OneToMany
-	 @JoinColumn (name = "id_usuario")
-	  private List<Viaje> viaje;
+    @OneToMany (mappedBy="usuario", cascade = CascadeType.ALL)
+    private List<Viaje> viajes = new ArrayList <Viaje>();
 	
 	
-	public List<Viaje> getViaje() {
-		return viaje;
+    
+	public Long getIdUsuario() {
+		return idUsuario;
 	}
-	public void setViaje(List<Viaje> viaje) {
-		this.viaje = viaje;
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
 	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
 	public String getNombre() {
 		return nombre;
 	}
@@ -76,4 +71,12 @@ public class Usuario {
 	public void setRol(String rol) {
 		this.rol = rol;
 	}
+	public List<Viaje> getViajes() {
+		return viajes;
+	}
+	public void setViajes(List<Viaje> viajes) {
+		this.viajes = viajes;
+	}
+	
+	
 }

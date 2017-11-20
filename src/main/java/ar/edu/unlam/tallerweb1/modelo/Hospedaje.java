@@ -1,11 +1,16 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Hospedaje {
@@ -18,8 +23,12 @@ public class Hospedaje {
 	private String tipoHospedaje;
 	private String ubicacion;
 	private float precio;
+	private String servicios;
 	
+	 @OneToMany (mappedBy="hospedaje", cascade = CascadeType.ALL)
+	    private List<Viaje> viajes = new ArrayList <Viaje>();
 
+	
 	
 	public Long getIdHospedaje() {
 		return idHospedaje;
@@ -60,6 +69,18 @@ public class Hospedaje {
 	}
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
+	}
+	public List<Viaje> getViajes() {
+		return viajes;
+	}
+	public void setViajes(List<Viaje> viajes) {
+		this.viajes = viajes;
+	}
+	public String getServicios() {
+		return servicios;
+	}
+	public void setServicios(String servicios) {
+		this.servicios = servicios;
 	}
 	
 	

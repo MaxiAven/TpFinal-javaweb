@@ -19,12 +19,16 @@ public class Viaje {
 	private String img3;
 	
 	 @ManyToOne
-	  @JoinColumn(name="id_hospedaje")
+	  @JoinColumn(name="idHospedaje")
 	  private Hospedaje hospedaje;
 	 
 	 @ManyToOne
-	  @JoinColumn(name="id_transporte")
+	  @JoinColumn(name="idTransporte")
 	  private Transporte transporte;
+	 
+	 @ManyToOne
+	  @JoinColumn(name="idUsuario")
+	  private Usuario usuario;
 	
 	public Hospedaje getHospedaje() {
 		return hospedaje;
@@ -68,5 +72,13 @@ public class Viaje {
 	public void setImg3(String img3) {
 		this.img3 = img3;
 	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	
 
 }

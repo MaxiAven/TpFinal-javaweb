@@ -1,15 +1,20 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Transporte {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idViaje;
+	private Long idTransporte;
 	private String salida;
 	private String llegada;
 	private String lugar;
@@ -17,7 +22,9 @@ public class Transporte {
 	private float precio;
     private String descripcion;
    
-    
+    @OneToMany (mappedBy="transporte", cascade = CascadeType.ALL)
+    private List<Viaje> viajes = new ArrayList <Viaje>();
+
   
 
 	public String getSalida() {
@@ -68,13 +75,23 @@ public class Transporte {
 		this.descripcion = descripcion;
 	}
 
-	public Long getIdViaje() {
-		return idViaje;
+	public Long getIdTransporte() {
+		return idTransporte;
 	}
 
-	public void setIdViaje(Long idViaje) {
-		this.idViaje = idViaje;
+	public void setIdTransporte(Long idTransporte) {
+		this.idTransporte = idTransporte;
 	}
+
+	public List<Viaje> getViajes() {
+		return viajes;
+	}
+
+	public void setViajes(List<Viaje> viajes) {
+		this.viajes = viajes;
+	}
+
+
 	
 	
 }
