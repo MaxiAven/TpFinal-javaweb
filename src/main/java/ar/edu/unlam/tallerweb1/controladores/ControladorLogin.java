@@ -14,6 +14,7 @@ import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
+import ar.edu.unlam.tallerweb1.servicios.ServicioTransporte;
 import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
 
 @Controller
@@ -23,6 +24,8 @@ public class ControladorLogin {
 	private ServicioLogin servicioLogin;
 	@Inject
 	private ServicioViaje servicioViaje;
+	@Inject
+	private ServicioTransporte servicioTransporte;
 
 	@RequestMapping("/login")
 	public ModelAndView irALogin() {
@@ -54,6 +57,24 @@ public class ControladorLogin {
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {
 		return new ModelAndView("home");
+	}
+	
+
+	//Metodo para la carga del traslado 
+	@RequestMapping(path="/cargarTransporte", method=RequestMethod.GET)
+	public ModelAndView cargaViaje(){
+		ModelAndView mav = new ModelAndView("cargaTransporte");
+		mav.addObject("listaViaje", servicioViaje.listarTipoViaje());
+		return mav;
+	}
+	
+	@RequestMapping(path = "/cargar-transporte", method = RequestMethod.POST)
+	public ModelAndView cargarTransporte(@ModelAttribute("transporte") Transporte transporte, HttpServletRequest request) {
+		
+			servicioTransporte.agregarTransporte(transporte);
+		
+		
+		return new ModelAndView("cargarHospedaje");
 	}
 	
 	//meotdo para mostrar vista de cargade viaje

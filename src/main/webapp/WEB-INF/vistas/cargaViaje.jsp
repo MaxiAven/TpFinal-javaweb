@@ -21,7 +21,11 @@
 		<div class="col-lg-2"></div>
 		<div class="col-lg-8">
 			<div class="panel panel-default">
-				<div class="panel-heading">Carga tu viaje</div>
+				<div class="panel-heading"></div>
+				<ul class="nav nav-tabs nav-justified">
+  			<li><a href="/TpFinal-java/cargarTransporte">Traslado</a></li>
+  			<li><a href="/TpFinal-java/cargarHospedaje">Hospedaje</a></li>
+ 			 <li class="active"><a href="/TpFinal-java/cargaViaje">Viaje</a></li>
 				<div class="panel-body cargaRuta">
 					<form:form action="cargar-viaje" method="POST" modelAttribute="viaje">
 						<div class="col-lg-12">
@@ -60,6 +64,7 @@
 						</div>
 					</form:form>
 				</div>
+				</ul>
 			</div>
 		</div>
 	</div>

@@ -1,16 +1,28 @@
 <%@ include file="header.jsp"%>
 <!-- <div class="container"> -->
 <div class="col-md-6 col-md-offset-3 fondoFormulario">
+
+ 			 
 	<div class="panel panel-default">
-		<div class="panel-heading">Contanos sobre tu Hospedaje!</div>
+		<div class="panel-heading"></div>
+		<ul class="nav nav-tabs nav-justified">
+  			<li><a href="/TpFinal-java/cargarTransporte">Traslado</a></li>
+  			<li class="active"><a href="/TpFinal-java/cargarHospedaje">Hospedaje</a></li>
+ 			 <li><a href="/TpFinal-java/cargarViaje">Viaje</a></li>
 		<div class="panel-body">
 			<form:form action="cargar-hospedaje" method="POST"
 				modelAttribute="hospedaje">
 
 				<div class="form-group">
-					<label for="tipoHospedaje">Tipo Hopedaje:</label> <input
-						type="text" class="form-control" name="tipoHospedaje"
-						id="tipoHospedaje">
+					<label for="tipoHospedaje">Tipo Hopedaje:</label> 
+					<select class="form-control" name="lugar" id="lugar">
+   				 		<option value="">Seleccione una opción</option>
+   				 		<option value="hotel">Hotel</option>
+   				 		<option value="hostel">Hostel</option>
+   				 		<option value="casa">Casa</option>
+   				 		<option value="departamento">Departamento</option>
+   				 		<option value="otros">Otros</option>
+   				 	</select>
 				</div>
 
 
@@ -98,3 +110,4 @@
 
 
 </div>
+</ul>
