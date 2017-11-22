@@ -35,10 +35,29 @@ public class TransporteDaoImpl implements TransporteDao{
 		final Session session = sessionFactory.getCurrentSession();
 //		return session.createCriteria(Transporte.class).add(Restrictions.le("precio", precio)).list();
 		Criterion precio1 = Restrictions.le("precio",precio);
-		Criterion lugar1 = Restrictions.like("lugar",lugar);
-		LogicalExpression orExp = Restrictions.or(precio1,lugar1);
-		return session.createCriteria(Transporte.class).add(orExp).list();
+		Criterion lugar1 = Restrictions.eq("lugar",lugar);
 		
+		LogicalExpression andExp = Restrictions.and(precio1,lugar1);
+		LogicalExpression orExp = Restrictions.or(precio1,lugar1);
+	
+		
+		if(precio!=10000){
+		      if(!lugar.equals("")){
+		    	  
+		    	  return session.createCriteria(Transporte.class).add(Restrictions.le("precio", precio)).list();
+		      }else{
+		    	  System.out.println("hola");
+		    	  return session.createCriteria(Transporte.class).add(andExp).list();
+		      }
+		}else{ 
+			if(!lugar.equals("")){
+				  return session.createCriteria(Transporte.class).add(Restrictions.eq("lugar", lugar)).list(); 
+			}else{
+				
+				return session.createCriteria(Transporte.class).add(orExp).list();
+			}
+			
+			}
 //		crit.add(orExp);
 //		List results = crit.list(); 
 	}

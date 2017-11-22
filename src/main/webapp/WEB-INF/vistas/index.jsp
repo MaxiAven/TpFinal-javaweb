@@ -5,13 +5,13 @@
     		<div class="col-lg-10">
     		 <div class="col-lg-7">
     		
-    		 	<input type="text" value=0 class="form-control input-lg" name="precio" id="precio" placeholder="Ingresa tu presupuesto (ej: $1000)">
+    		 	<input type="text" value=10000 class="form-control input-lg" name="precio" id="precio" placeholder="Ingresa tu presupuesto (ej: $1000)">
     		 	
     		 </div>
     		 <div class="col-lg-3">
     		 
     		 	<select class="form-control input-lg" name=lugar>
-    		 		<option>Elegí tu lugar</option>
+    		 		<option value= >Elegí tu lugar</option>
     		 		<option value=playa>Playa</option>
     		 		<option value=montana>Montaña</option>
     		 		<option value=ciudad>Ciudad</option>
