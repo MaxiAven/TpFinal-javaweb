@@ -44,6 +44,7 @@ public class ControladorLogin {
 		Usuario usuarioBuscado = servicioLogin.consultarUsuario(usuario);
 		if (usuarioBuscado != null) {
 			request.getSession().setAttribute("nombre", usuarioBuscado.getNombre());
+			request.getSession().setAttribute("id", usuarioBuscado.getIdUsuario());
 			return new ModelAndView("panel");
 		} else {
 			

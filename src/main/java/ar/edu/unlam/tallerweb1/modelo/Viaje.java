@@ -17,8 +17,13 @@ public class Viaje {
 	private String img1;
 	private String img2;
 	private String img3;
+	private String sug1;
+	private String sug2;
+	private String sug3;
+	private int calificacion;
 	
-	 @ManyToOne
+	
+	@ManyToOne
 	  @JoinColumn(name="idHospedaje")
 	  private Hospedaje hospedaje;
 	 
@@ -79,6 +84,31 @@ public class Viaje {
 		this.usuario = usuario;
 	}
 	
+	 public String getSug3() {
+			return sug3;
+		}
+		public void setSug3(String sug3) {
+			this.sug3 = sug3;
+		}
+		public String getSug1() {
+			return sug1;
+		}
+		public void setSug1(String sug1) {
+			this.sug1 = sug1;
+		}
+		public String getSug2() {
+			return sug2;
+		}
+		public void setSug2(String sug2) {
+			this.sug2 = sug2;
+		}
+		
+		public int getCalificacion() {
+			return calificacion;
+		}
+		public void setCalificacion(int calificacion) {
+			this.calificacion = calificacion;
+		}
 	
 
 }
