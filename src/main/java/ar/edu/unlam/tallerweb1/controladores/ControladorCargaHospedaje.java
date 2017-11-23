@@ -39,7 +39,7 @@ public class ControladorCargaHospedaje {
 		hospedaje.setRuta(miRuta);*/ //Aca intento guardar la foreingKey que viene de Ruta, no me sale pero es algo así.
 		
 		servicioHospedaje.agregarHospedaje(hospedaje);
-		return new ModelAndView("misExperiencias"); //Vista lista destino + hospedaje!
+		return new ModelAndView("cargaViaje"); //Vista lista destino + hospedaje!
 	}
 
 	@RequestMapping(path="/misExperiencias", method=RequestMethod.GET)

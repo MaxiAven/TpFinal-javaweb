@@ -16,6 +16,9 @@
 	<body>
 	<%@ include file="menuPanel.jsp" %>
 	
+	<h1>Mis viajes</h1>
+	
+	
 
 </body>
 </html>

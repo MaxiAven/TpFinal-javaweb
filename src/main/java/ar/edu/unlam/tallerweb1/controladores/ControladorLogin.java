@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+
 import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
@@ -45,6 +46,7 @@ public class ControladorLogin {
 		if (usuarioBuscado != null) {
 			request.getSession().setAttribute("nombre", usuarioBuscado.getNombre());
 			request.getSession().setAttribute("id", usuarioBuscado.getIdUsuario());
+			
 			return new ModelAndView("panel");
 		} else {
 			
@@ -88,7 +90,13 @@ public class ControladorLogin {
 	@RequestMapping(path="/cargar-viaje", method = RequestMethod.POST)
 	public ModelAndView cargarViaje(@ModelAttribute("viaje") Viaje viaje, HttpServletRequest request)
 	{
+		//El id usuario ya lo guarda desde que se loguea en validar-login y se lo llama como "nombre" y "id"
+		Long id = (Long) request.getSession().getAttribute("id"); 
+ 		Usuario miUsuario = servicioLogin.consultarUsuarioPorId(id); //Busco por criteria
+ 		viaje.setUsuario(miUsuario); //Le seteo el id a viaje
+ 		//System.out.println("el id de usuario es"+ miUsuario.getIdUsuario()); //PRUEBA DE QUE ME TRAIGA EL ID
 		servicioViaje.agregarViaje(viaje);
+		
 		return new ModelAndView("cargaViaje");
 	}
 	

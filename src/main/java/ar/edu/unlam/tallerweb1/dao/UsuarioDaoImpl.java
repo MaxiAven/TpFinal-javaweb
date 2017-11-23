@@ -38,6 +38,14 @@ public class UsuarioDaoImpl implements UsuarioDao {
 		sessionFactory.getCurrentSession().save(usuario);
 	}
 	
+	public Usuario consultarUsuarioPorId (Long id) {
+		final Session sesion =  sessionFactory.getCurrentSession();
+//		System.out.println("el mail en dao es"+ email);
+		return (Usuario) sesion.createCriteria(Usuario.class)
+				.add(Restrictions.eq("id", id))
+				.uniqueResult();
+	}
+	
 	
 	
 
