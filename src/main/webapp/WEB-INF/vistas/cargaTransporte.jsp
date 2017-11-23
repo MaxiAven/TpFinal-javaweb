@@ -13,6 +13,8 @@
 	    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA07VHJApYzXc3uJgFEk4l04KaSABLyaVA&sensor=false"></script>
 <script>
 
+
+
 var rendererOptions = {
 draggable: true
 };
@@ -70,7 +72,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	</head>
 	<body>
 <!-- menu que el usuario al logearse -->
-<%@ include file="menuPanel.jsp" %>
+
+
+<c:if test="${nombre == null}" > 	
+<c:redirect url="/login" /> 
+</c:if>
+
+<c:if test="${nombre != null}" > 	
+<jsp:include page="menuPanel.jsp" />
+</c:if>
 	
 	 	<div class="container">
 	 	<div class="col-lg-2"></div>

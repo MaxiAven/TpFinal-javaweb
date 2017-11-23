@@ -15,7 +15,14 @@
 </head>
 <body>
 	<!-- menu que el usuario al logearse -->
-	<%@ include file="menuPanel.jsp"%>
+<c:if test="${nombre == null}" > 	
+<c:redirect url="/login" /> 
+</c:if>
+
+<c:if test="${nombre != null}" > 	
+<jsp:include page="menuPanel.jsp" />
+</c:if>
+
 	<div class="container">
 		<div class="col-lg-2"></div>
 		<div class="col-lg-8">
