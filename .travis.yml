@@ -6,4 +6,10 @@ recipients:
 - maximilianoariela@gmail.com	
 - alejandro.franzot@gmail.com
 - gonzalvomartin@gmail.com
-- villava.nadia@gmail.com
+- villalva.nadia@gmail.com
+on_success: always 
+on_failure: always 
+
+branch:
+- master
+- prueba2
