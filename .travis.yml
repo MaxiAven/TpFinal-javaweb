@@ -2,7 +2,7 @@ language: java
 
 notifications:
 email:
-maximilianoariela@gmail.com	
-alejandro.franzot@gmail.com
-gonzalvomartin@gmail.com
-villava.nadia@gmail.com
+- maximilianoariela@gmail.com	
+- alejandro.franzot@gmail.com
+- gonzalvomartin@gmail.com
+- villava.nadia@gmail.com
