@@ -2,6 +2,7 @@ language: java
 
 notifications:
 email:
+recipients:
 - maximilianoariela@gmail.com	
 - alejandro.franzot@gmail.com
 - gonzalvomartin@gmail.com
