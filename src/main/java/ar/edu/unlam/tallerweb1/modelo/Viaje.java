@@ -14,6 +14,7 @@ public class Viaje {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idViaje;
 	private String nombre;
+	private float precio;
 	private String img1;
 	private String img2;
 	private String img3;
@@ -108,6 +109,12 @@ public class Viaje {
 		}
 		public void setCalificacion(int calificacion) {
 			this.calificacion = calificacion;
+		}
+		public double getPrecio() {
+			return precio;
+		}
+		public void setPrecio(float precio) {
+			this.precio = precio;
 		}
 	
 

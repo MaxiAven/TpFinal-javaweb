@@ -9,7 +9,7 @@ public interface ServicioTransporte {
 	
 	public void agregarTransporte(Transporte transporte);
 	Transporte consultarTransportePorId(Long id);
-	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
+//	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
 	public List<Transporte> listarTipoTransporte();
 
 }
