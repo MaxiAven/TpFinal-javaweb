@@ -7,18 +7,19 @@
 	<div class="panel-body cargaRuta">
 	<table class="table table-condensed">
 		<tr>
-			<th>Destino</th>
-			<th>Cantidad de personas</th>
-			<th>Cantidad de Días</th>
-			<th>Descripción</th>
+			<th>Nombre del viaje</th>
+			<th>Lugar de Partida/Llegada</th>
+			<th>Tipo de Destino</th>
 			<th>Precio</th>
+			<th>Descripcion</th>
 		</tr>
 		<c:forEach items ="${lista}" var= "lista">
 		<tr>
-<%-- 			<td>${listado.getSalida()} - ${lista.getLlegada()}</td> --%>
+			<td>${lista.getNombre()}</td>
+			<td>${lista.getTransporte().getSalida()} - ${lista.getTransporte().getLlegada()}</td>
 		 	<td>${lista.getTransporte().getLugar()}</td> 
 		    	<td>${lista.getPrecio()}</td>
-<%-- 			<td>${listado.getLugar()}</td> --%>
+ 			<td><a href="">Ver descripcion</a></td>
 			
 			
 		</tr>

@@ -36,11 +36,11 @@ public class ServicioTransporteImp implements ServicioTransporte{
 		this.servicioTransporteDao = servicioTransporteDao;
 	}
 
-	@Override
-	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar) {
-		
-		return servicioTransporteDao.buscarPorPrecioYDestino(precio, lugar);
-	}
+//	@Override
+//	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar) {
+//		
+//		return servicioTransporteDao.buscarPorPrecioYDestino(precio, lugar);
+//	}
 	
 	@Override
 	public Transporte consultarTransportePorId(Long id) {

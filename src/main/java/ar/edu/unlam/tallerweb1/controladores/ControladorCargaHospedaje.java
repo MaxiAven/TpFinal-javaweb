@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioHospedaje;
-import ar.edu.unlam.tallerweb1.servicios.ServicioRuta;
+
 
 
 @Controller
@@ -18,8 +18,7 @@ public class ControladorCargaHospedaje {
 	
 	@Inject
 	private ServicioHospedaje servicioHospedaje;
-	@Inject
-	private ServicioRuta servicioRuta;
+	
 	
 	
 	@RequestMapping(path="/cargarHospedaje", method=RequestMethod.GET)

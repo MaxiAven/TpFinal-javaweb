@@ -16,7 +16,7 @@ public interface TransporteDao {
 	
 	public Transporte consultarTransportePorId(Long id);
 
-	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
+	//public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
 
 	public List<Transporte> listarTipoTransporte();
 	
