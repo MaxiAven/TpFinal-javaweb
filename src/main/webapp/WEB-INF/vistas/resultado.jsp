@@ -13,12 +13,12 @@
 			<th>Descripción</th>
 			<th>Precio</th>
 		</tr>
-		<c:forEach items ="${lista}" var= "lista">
+		<c:forEach items ="${listado}" var= "listado">
 		<tr>
-			<td>${lista.getSalida()} - ${lista.getLlegada()}</td>
-			<td>${lista.getDescripcion()}</td>
-			<td>${lista.getPrecio()}</td>
-			<td>${lista.getLugar()}</td>
+			<td>${listado.getSalida()} - ${lista.getLlegada()}</td>
+			<td>${listado.getDescripcion()}</td>
+			<td>${listado.getPrecio()}</td>
+			<td>${listado.getLugar()}</td>
 			
 			
 		</tr>

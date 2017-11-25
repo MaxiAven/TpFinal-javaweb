@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 
 
@@ -27,16 +28,14 @@ public class ViajeDaoImpl implements ViajeDao{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	/*public List<Viaje> listarTipoViaje() {
-		final Session session = sessionFactory.getCurrentSession();
-		return session.createCriteria(Viaje.class).list();
-	}*/
-	
 	public List<Viaje> listarTipoViaje(){
 		final Session session = sessionFactory.getCurrentSession();
 		return session.createCriteria(Viaje.class).list();
+		
+		
 	}
 	@SuppressWarnings("unchecked")
+	@Override
 	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar) {
 		final Session session = sessionFactory.getCurrentSession();
 		Criteria Busqueda =session.createCriteria(Viaje.class);
