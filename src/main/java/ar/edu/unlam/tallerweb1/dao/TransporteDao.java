@@ -14,11 +14,13 @@ public interface TransporteDao {
 	
 	//public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar);
 	
-	Transporte consultarTransportePorId(Long id);
+	public Transporte consultarTransportePorId(Long id);
 
 	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
 
 	public List<Transporte> listarTipoTransporte();
+	
+	public Transporte consultarUltimoRegistroDeTransporte();
 
 }
 

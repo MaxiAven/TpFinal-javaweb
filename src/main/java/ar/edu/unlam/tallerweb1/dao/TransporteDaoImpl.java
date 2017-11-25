@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.LogicalExpression;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -75,5 +76,14 @@ public class TransporteDaoImpl implements TransporteDao{
 		final Session session = sessionFactory.getCurrentSession();
 		return session.createCriteria(Transporte.class).list();
 	}
+
+	@Override
+	public Transporte consultarUltimoRegistroDeTransporte() {
+		final Session session = sessionFactory.getCurrentSession();
+		return (Transporte)session.createCriteria(Transporte.class)
+					   .addOrder(Order.desc("idTransporte")).setMaxResults(1).uniqueResult();
+	}
+	
+	
 
 }

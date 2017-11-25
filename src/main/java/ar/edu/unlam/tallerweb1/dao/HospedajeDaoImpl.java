@@ -6,13 +6,17 @@ import javax.inject.Inject;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
 import org.springframework.stereotype.Repository;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 
 
+
 @Repository("hospedajeDao")
 public class HospedajeDaoImpl implements HospedajeDao{
+	
+
 	@Inject
     private SessionFactory sessionFactory;
 
@@ -30,6 +34,12 @@ public class HospedajeDaoImpl implements HospedajeDao{
 		return session.createCriteria(Hospedaje.class).list();
 	}
 	
+	@Override
+	public Hospedaje consultarUltimoRegistroDeHospedaje() {
+		final Session session = sessionFactory.getCurrentSession();
+		return (Hospedaje)session.createCriteria(Hospedaje.class)
+					   .addOrder(Order.desc("idHospedaje")).setMaxResults(1).uniqueResult();
+	}
 	
 
 

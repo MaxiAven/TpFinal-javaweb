@@ -19,7 +19,6 @@ import ar.edu.unlam.tallerweb1.modelo.Transporte;
 @Transactional
 public class ServicioTransporteImp implements ServicioTransporte{
 	
-
 	@Inject
 	private TransporteDao servicioTransporteDao;
 
@@ -54,5 +53,13 @@ public class ServicioTransporteImp implements ServicioTransporte{
 		
 		return servicioTransporteDao.listarTipoTransporte();
 	}
+
+	@Override
+	public Transporte consultarUltimoRegistroDeTransporte() {
+		// TODO Auto-generated method stub
+		return servicioTransporteDao.consultarUltimoRegistroDeTransporte();
+	}
+	
+	
 	
 }

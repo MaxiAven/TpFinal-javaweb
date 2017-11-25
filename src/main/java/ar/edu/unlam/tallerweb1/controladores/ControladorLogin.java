@@ -10,10 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-
+import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
+import ar.edu.unlam.tallerweb1.servicios.ServicioHospedaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
 import ar.edu.unlam.tallerweb1.servicios.ServicioTransporte;
 import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
@@ -27,6 +28,8 @@ public class ControladorLogin {
 	private ServicioViaje servicioViaje;
 	@Inject
 	private ServicioTransporte servicioTransporte;
+	@Inject
+	private ServicioHospedaje servicioHospedaje;
 
 	@RequestMapping("/login")
 	public ModelAndView irALogin() {
@@ -95,6 +98,15 @@ public class ControladorLogin {
  		Usuario miUsuario = servicioLogin.consultarUsuarioPorId(id); //Busco por criteria
  		viaje.setUsuario(miUsuario); //Le seteo el id a viaje
  		//System.out.println("el id de usuario es"+ miUsuario.getIdUsuario()); //PRUEBA DE QUE ME TRAIGA EL ID
+ 		 
+ 		//obtengo el ultimo id de transporte cargado y lo inserto en la tabla viaje
+ 		Transporte miTransporte = servicioTransporte.consultarUltimoRegistroDeTransporte();
+ 		viaje.setTransporte(miTransporte);
+ 		
+ 		//obtengo el ultimo id de hospedaje cargado y lo inserto en la tabla viaje
+ 		Hospedaje miHospedaje = servicioHospedaje.consultarUltimoRegistroDeHospedaje();
+ 		viaje.setHospedaje(miHospedaje);
+ 		
 		servicioViaje.agregarViaje(viaje);
 		
 		return new ModelAndView("cargaViaje");

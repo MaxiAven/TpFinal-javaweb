@@ -8,8 +8,9 @@ import ar.edu.unlam.tallerweb1.modelo.Transporte;
 public interface ServicioTransporte {
 	
 	public void agregarTransporte(Transporte transporte);
-	Transporte consultarTransportePorId(Long id);
+	public Transporte consultarTransportePorId(Long id);
 	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
 	public List<Transporte> listarTipoTransporte();
+	public Transporte consultarUltimoRegistroDeTransporte();
 
 }

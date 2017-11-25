@@ -16,6 +16,7 @@ import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 @Transactional
 public class ServicioHospedajeImpl implements ServicioHospedaje{
 
+	
 	@Inject
 	private HospedajeDao servicioHospedajeDao;
 
@@ -30,4 +31,11 @@ public class ServicioHospedajeImpl implements ServicioHospedaje{
 		
 		return servicioHospedajeDao.listarTipoHospedaje();
 	}
+	
+	@Override
+	public Hospedaje consultarUltimoRegistroDeHospedaje() {
+		
+		return servicioHospedajeDao.consultarUltimoRegistroDeHospedaje();
+	}
+
 }
