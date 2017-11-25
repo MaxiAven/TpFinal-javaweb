@@ -30,7 +30,11 @@ public class ServicioViajeImpl implements ServicioViaje{
 		
 		return servicioViajeDao.listarTipoViaje();
 	}
-
+	@Override
+	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar) {
+		
+		return servicioViajeDao.buscarPorPrecioYDestino(precio, lugar);
+	}
 
 	
 }
