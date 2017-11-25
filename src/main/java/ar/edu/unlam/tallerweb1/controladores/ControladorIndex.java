@@ -27,7 +27,7 @@ public class ControladorIndex {
 	@RequestMapping(path="/listaResultado")
 	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("lugar") String lugar ,@RequestParam("precio") float precio ){
 		
-		ModelAndView mav = new ModelAndView("resultado");
+		ModelAndView mav = new ModelAndView("resultadoBusqueda");
 		List<Viaje> listado = servicioViaje.buscarPorPrecioYDestino(precio,lugar);
 		mav.addObject("lista", listado);
 		return mav;
