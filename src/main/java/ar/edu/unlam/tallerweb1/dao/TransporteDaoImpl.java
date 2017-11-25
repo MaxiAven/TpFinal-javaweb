@@ -6,13 +6,7 @@ import javax.inject.Inject;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-<<<<<<< HEAD
-import org.hibernate.criterion.Criterion;
-import org.hibernate.criterion.LogicalExpression;
 import org.hibernate.criterion.Order;
-=======
-
->>>>>>> master
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
