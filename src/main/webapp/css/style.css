@@ -9,6 +9,18 @@ body{
 	color:#fff;
 }
 
+.bpanel{
+	color:#000;
+	background-color: #f8f8f8;
+	background-image:none;!important
+	
+}
+
+.menu-lat{
+	
+	border-left:1px solid #eee;
+	
+}
 
 
 .buscador{

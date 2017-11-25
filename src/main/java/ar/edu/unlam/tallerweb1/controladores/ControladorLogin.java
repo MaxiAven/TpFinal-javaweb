@@ -58,7 +58,10 @@ public class ControladorLogin {
 		return new ModelAndView("login", model);
 	}
 
-	
+	@RequestMapping(path = "/panel", method = RequestMethod.GET)
+	public ModelAndView irAPanel() {
+		return new ModelAndView("panel");
+	}
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {
