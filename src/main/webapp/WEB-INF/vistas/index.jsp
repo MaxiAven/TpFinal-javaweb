@@ -5,7 +5,7 @@
     		<div class="col-lg-10">
     		 <div class="col-lg-7">
     		
-    		 	<input type="text"  class="form-control input-lg" name="precio" id="precio" placeholder="Ingresa tu presupuesto (ej: $1000)">
+    		 	<input type="text"  value=0 class="form-control input-lg" name="precio" id="precio" placeholder="Ingresa tu presupuesto (ej: $1000)">
     		 	
     		 </div>
     		 <div class="col-lg-3">
