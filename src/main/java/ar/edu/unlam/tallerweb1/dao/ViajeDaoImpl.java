@@ -5,8 +5,10 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.hibernate.Criteria;
+import org.hibernate.FetchMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +17,8 @@ import ar.edu.unlam.tallerweb1.modelo.Viaje;
 
 @Repository("viajeDao")
 public class ViajeDaoImpl implements ViajeDao{
+	
+
 	@Inject
     private SessionFactory sessionFactory;
 
@@ -63,6 +67,18 @@ public class ViajeDaoImpl implements ViajeDao{
 		
 	}
 
+	@Override
+	public List<Viaje> listarTodosLosViajes() {
+		final Session sesion =  sessionFactory.getCurrentSession();
+		return sesion.createCriteria(Viaje.class).list();
+	}
+	
+	/*@Override
+	public Viaje historiaDeViaje(Long id) {
+		final Session sesion =  sessionFactory.getCurrentSession();
+		return sesion.createCriteria(Viaje.class).list();
+	}
+*/
 	
 
 

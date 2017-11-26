@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.controladores;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,6 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
@@ -62,6 +65,23 @@ public class ControladorLogin {
 	public ModelAndView irAPanel() {
 		return new ModelAndView("panel");
 	}
+	
+	@RequestMapping(path = "/todosLosViajes", method = RequestMethod.GET)
+	public ModelAndView irATodosLosViajes() {
+		ModelAndView mav = new ModelAndView("todosLosViajes");
+		mav.addObject("listarViajes", servicioViaje.listarTodosLosViajes());
+		return mav;
+	}
+
+	
+	/*@RequestMapping(path="/verHistoria")
+	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("id") Long id ){
+		
+		ModelAndView mav = new ModelAndView("historiaDeUsuario");
+		List<Viaje> listado = servicioViaje.buscarPorPrecioYDestino(precio,lugar);
+		mav.addObject("lista", listado);
+		return mav;
+	}*/
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {

@@ -1,10 +1,15 @@
 package ar.edu.unlam.tallerweb1.dao;
 
+
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
+import ar.edu.unlam.tallerweb1.modelo.Viaje;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -13,6 +18,8 @@ import javax.inject.Inject;
 // para encontrar esta clase.
 @Repository("usuarioDao")
 public class UsuarioDaoImpl implements UsuarioDao {
+
+	
 
 	// Como todo dao maneja acciones de persistencia, normalmente estará inyectado el session factory de hibernate
 	// el mismo está difinido en el archivo hibernateContext.xml
@@ -45,6 +52,8 @@ public class UsuarioDaoImpl implements UsuarioDao {
 				.add(Restrictions.eq("id", id))
 				.uniqueResult();
 	}
+	
+	
 	
 	
 	

@@ -1,4 +1,11 @@
-<%@ include file="header.jsp" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:if test="${nombre != null}" > 	
+<jsp:include page="menuPanel.jsp" />
+</c:if>
+<c:if test="${nombre == null}" > 	
+<jsp:include page="header.jsp" />
+</c:if>
 		<div class="container buscador">
 			<div class="col-lg-1"></div>
 			<form:form action="listaResultado" method="GET">
