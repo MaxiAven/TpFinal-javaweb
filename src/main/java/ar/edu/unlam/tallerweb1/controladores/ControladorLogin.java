@@ -66,6 +66,12 @@ public class ControladorLogin {
 		return new ModelAndView("panel");
 	}
 	
+	@RequestMapping(path = "/home", method = RequestMethod.GET)
+	public ModelAndView irAHome() {
+		return new ModelAndView("home");
+	}
+	
+	
 	@RequestMapping(path = "/todosLosViajes", method = RequestMethod.GET)
 	public ModelAndView irATodosLosViajes() {
 		ModelAndView mav = new ModelAndView("todosLosViajes");
@@ -83,11 +89,6 @@ public class ControladorLogin {
 		return mav;
 	}*/
 
-	@RequestMapping(path = "/home", method = RequestMethod.GET)
-	public ModelAndView irAHome() {
-		return new ModelAndView("home");
-	}
-	
 
 	//Metodo para la carga del traslado 
 	@RequestMapping(path="/cargarTransporte", method=RequestMethod.GET)

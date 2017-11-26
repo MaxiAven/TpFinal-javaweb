@@ -12,7 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import ar.edu.unlam.tallerweb1.controladores.ControladorLogin;
+import ar.edu.unlam.tallerweb1.servicios.ServicioHospedaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
+import ar.edu.unlam.tallerweb1.servicios.ServicioTransporte;
+import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class LoginTest {
@@ -51,5 +55,24 @@ public class LoginTest {
 		assertThat(mav.getViewName()).isEqualTo("panel");
 		
 	}
+	
+	//test para validar la correcta carga de un viaje
+	@Test
+	public void crearCargaViajes(){
+		
+	
+		ServicioViaje servicioViajeMock = mock(ServicioViaje.class);
+		List<Viaje> listarViajes = servicioViajeMock.listarTodosLosViajes();
+		assertThat(listarViajes).isNotNull();
+	}
+	
+	/*@Test
+	public void crearCargaHospedaje(){
+		
+	
+		ServicioHospedaje servicioHospedajeMock = mock(ServicioHospedaje.class);
+		List<Hospedaje> listarHospedaje = servicioHospedajeMock.listarTodosLosViajes();
+		assertThat(listarHospedaje).isNotNull();
+	}*/
 
 }
