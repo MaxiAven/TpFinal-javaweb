@@ -66,13 +66,6 @@ public class LoginTest {
 		assertThat(listarViajes).isNotNull();
 	}
 	
-	/*@Test
-	public void crearCargaHospedaje(){
-		
 	
-		ServicioHospedaje servicioHospedajeMock = mock(ServicioHospedaje.class);
-		List<Hospedaje> listarHospedaje = servicioHospedajeMock.listarTodosLosViajes();
-		assertThat(listarHospedaje).isNotNull();
-	}*/
 
 }
