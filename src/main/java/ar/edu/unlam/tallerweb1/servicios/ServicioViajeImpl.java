@@ -48,5 +48,8 @@ public class ServicioViajeImpl implements ServicioViaje{
 		return servicioViajeDao.listarTodosLosViajes();
 	}
 
-	
+	public List<Viaje> listaMisViajes (Long id){
+		
+		return servicioViajeDao.listaMisViajes(id);
+	}
 }

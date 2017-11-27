@@ -12,7 +12,9 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import ar.edu.unlam.tallerweb1.modelo.Usuario;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
+import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
 
 
 @Repository("viajeDao")
@@ -21,6 +23,9 @@ public class ViajeDaoImpl implements ViajeDao{
 
 	@Inject
     private SessionFactory sessionFactory;
+	
+	@Inject
+	private ServicioLogin servicioLogin;
 
 	@Override
 	public void agregarViaje(Viaje viaje) {
@@ -73,6 +78,14 @@ public class ViajeDaoImpl implements ViajeDao{
 		return sesion.createCriteria(Viaje.class).list();
 	}
 	
+	@Override
+	public List<Viaje> listaMisViajes(Long id) {
+		final Session sesion =  sessionFactory.getCurrentSession();
+	
+		return (List<Viaje>) sesion.createCriteria(Viaje.class)
+				.add(Restrictions.eq("usuario.id",id)).list();
+	}
+	
 	/*@Override
 	public Viaje historiaDeViaje(Long id) {
 		final Session sesion =  sessionFactory.getCurrentSession();
@@ -83,4 +96,3 @@ public class ViajeDaoImpl implements ViajeDao{
 
 
 }
-

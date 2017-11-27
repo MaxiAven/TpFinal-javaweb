@@ -32,7 +32,7 @@ public class ControladorRegistro {
 		modelo.put("registroOk", "Usuario Registrado");
 		servicioRegistro.registrarUsuario(usuario);
 		
-		return  new ModelAndView("registroUsuario",modelo);
+		return  new ModelAndView("login",modelo);
 	
 } 
 }
