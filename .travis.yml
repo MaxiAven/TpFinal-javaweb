@@ -3,7 +3,6 @@ language: java
 notifications:
 email:
 recipients:
-
 - alejandro.franzot@gmail.com
 - gonzalvomartin@gmail.com
 - villalva.nadia@gmail.com
