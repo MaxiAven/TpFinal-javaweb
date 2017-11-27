@@ -16,18 +16,18 @@
 	<body class="bpanel">
 	<%@ include file="menuPanel.jsp" %>
 	
-		<div class="col-lg-3">
+		<div class="col-lg-2">
 			<ul class="nav nav-pills nav-stacked">
 			<br/>
 			<br/>
-			<li role="presentation" class="active"><a href="panel">Mis viajes</a></li>
+			<li role="presentation"><a href="misViajes">Mis viajes</a></li>
   			<li role="presentation"><a href="todosLosViajes">Ver Todos los viajes</a></li>
   			<li role="presentation"><a href="#">Algo mas</a></li>
 			</ul>
 		</div>
 		<div class="col-lg-9  menu-lat">
 		 <div class="page-header">
-  			<h2>Mis Viajes</h2>
+  			<h2>Bienvenido a Manejate.com! Este es su panel personal</h2>
   			
 		</div>
 		</div>

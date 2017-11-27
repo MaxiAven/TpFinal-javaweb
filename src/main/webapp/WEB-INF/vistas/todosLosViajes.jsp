@@ -1,5 +1,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${nombre == null}" > 	
+<c:redirect url="/login" /> 
+</c:if>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,12 +15,12 @@
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 <body class="bpanel">
 <jsp:include page="menuPanel.jsp" />
-<div class="col-lg-3">
+<div class="col-lg-2">
 			<ul class="nav nav-pills nav-stacked">
 			<br/>
 			<br/>
-			<li role="presentation"><a href="panel">Mis viajes</a></li>
-  			<li role="presentation" class="active"><a href="todosLosViajes">Ver Todos los viajes</a></li>
+			<li role="presentation"><a href="misViajes">Mis viajes</a></li>
+  			<li role="presentation"><a href="todosLosViajes">Ver Todos los viajes</a></li>
   			<li role="presentation"><a href="#">Algo mas</a></li>
 			</ul>
 		</div>
@@ -43,7 +46,7 @@
         <td>${lista.getNombre()}</td>
         <td>${lista.usuario.getNombre()}</td>
         <td>${lista.transporte.getLlegada() }</td>
-        <td><a href="">Ver detalles</a></td>
+        <td><a href="#">Ver detalles</a></td>
       </tr>
     </tbody>
     </c:forEach>

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
+
 import ar.edu.unlam.tallerweb1.modelo.Transporte;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
@@ -66,18 +67,29 @@ public class ControladorLogin {
 		return new ModelAndView("panel");
 	}
 	
-	@RequestMapping(path = "/home", method = RequestMethod.GET)
-	public ModelAndView irAHome() {
-		return new ModelAndView("home");
-	}
-	
-	
 	@RequestMapping(path = "/todosLosViajes", method = RequestMethod.GET)
 	public ModelAndView irATodosLosViajes() {
 		ModelAndView mav = new ModelAndView("todosLosViajes");
 		mav.addObject("listarViajes", servicioViaje.listarTodosLosViajes());
 		return mav;
 	}
+	
+	@RequestMapping(path = "/misViajes")
+	public ModelAndView irAMisViajes(HttpServletRequest request) {
+
+		
+		ModelMap modelo = new ModelMap();
+		Long id = (Long) request.getSession().getAttribute("id"); 
+		List<Viaje> listaViaje= servicioViaje.listaMisViajes(id);
+		//System.out.println("el id de usuario es"+ id);
+		
+		modelo.put("viaje", listaViaje);
+		return new ModelAndView ("misViajes", modelo);
+	}
+	
+	
+	
+	
 
 	
 	/*@RequestMapping(path="/verHistoria")
@@ -89,6 +101,11 @@ public class ControladorLogin {
 		return mav;
 	}*/
 
+	@RequestMapping(path = "/home", method = RequestMethod.GET)
+	public ModelAndView irAHome() {
+		return new ModelAndView("home");
+	}
+	
 
 	//Metodo para la carga del traslado 
 	@RequestMapping(path="/cargarTransporte", method=RequestMethod.GET)
@@ -133,7 +150,7 @@ public class ControladorLogin {
  		
 		servicioViaje.agregarViaje(viaje);
 		
-		return new ModelAndView("cargaViaje");
+		return new ModelAndView("panel");
 	}
 	
 	@RequestMapping(path = "/logout")

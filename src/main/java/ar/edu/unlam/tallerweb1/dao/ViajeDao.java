@@ -13,5 +13,6 @@ public interface ViajeDao {
 	public List<Viaje> listarTipoViaje();
 	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar);
 	public List<Viaje> listarTodosLosViajes();
+	public List<Viaje> listaMisViajes(Long id);
 	//public Viaje historiaDeViaje(Long id);
 }
