@@ -13,5 +13,5 @@ public interface ServicioViaje {
 	public List<Viaje> listarTipoViaje();
 	public List<Viaje> buscarPorPrecioYDestino(float precio, String lugar);
 	public List<Viaje> listarTodosLosViajes();
-
+	public List<Viaje> mostrarExperienciaDeViaje(Long id);
 }

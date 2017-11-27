@@ -5,10 +5,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.hibernate.Criteria;
-import org.hibernate.FetchMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -72,13 +70,23 @@ public class ViajeDaoImpl implements ViajeDao{
 		final Session sesion =  sessionFactory.getCurrentSession();
 		return sesion.createCriteria(Viaje.class).list();
 	}
+
+
 	
-	/*@Override
-	public Viaje historiaDeViaje(Long id) {
-		final Session sesion =  sessionFactory.getCurrentSession();
-		return sesion.createCriteria(Viaje.class).list();
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Viaje>  mostrarExperienciaDeViaje(Long id) {
+		final Session session =  sessionFactory.getCurrentSession();
+	//	return  sesion.createCriteria(Viaje.class).list();
+		Criteria Busqueda =session.createCriteria(Viaje.class);
+		Busqueda.add(Restrictions.eq("idViaje",id));
+		return Busqueda.list();
 	}
-*/
+
+	
+
+
 	
 
 
