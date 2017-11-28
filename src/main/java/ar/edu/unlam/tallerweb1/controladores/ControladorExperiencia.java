@@ -3,7 +3,6 @@ package ar.edu.unlam.tallerweb1.controladores;
 import java.util.List;
 
 import javax.inject.Inject;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,4 +24,5 @@ public class ControladorExperiencia {
 		mav.addObject("lista", listado);
 		return mav;
    }
+ 
 }

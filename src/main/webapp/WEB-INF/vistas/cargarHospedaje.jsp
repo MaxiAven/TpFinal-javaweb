@@ -114,7 +114,7 @@
 					</label>
 						
 						<label class="form-control">
-					    <input type="checkbox" name="servicios" value="mascotasOK"> Pet Friendly
+					    <input type="checkbox" name="servicios" value="mascotas"> Pet Friendly
 					</label>
 						<label class="form-control">
 					    <input type="checkbox" name="servicios" value="blanqueria"> Blanquería

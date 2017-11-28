@@ -9,6 +9,31 @@ body{
 	color:#fff;
 }
 
+#listar{
+	background-image:url("../img/postal.jpg") ;
+	width:1100px;
+	height:650px; 
+	border:solid;
+	background-size:cover;
+	margin-left:13%;
+	
+}
+.texto{
+	margin-top:20%;
+	margin-left:15%;
+	width:700px;
+	height:400px;
+	font-family:Papyrus, fantasy;
+	font-size:23px;
+	color:black;
+	font-weight:700; 
+}
+
+.destacar{
+	font-style: italic;
+	
+	
+}
 .bpanel{
 	color:#000;
 	background-color: #f8f8f8;
@@ -60,9 +85,4 @@ body{
 .fondoFormulario{
 	
 	color:#000;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> e77cbbe3519a074734b472c32fa9acbb05c28d9d
