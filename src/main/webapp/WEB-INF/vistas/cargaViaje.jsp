@@ -41,18 +41,15 @@
 										type="text" class="form-control" name="nombre" id="nombre"
 										required>
 								</div>
-<<<<<<< HEAD
+									
 								<div class="form-group">
 									<label for="nombreViaje">Cual fue el costo total del viaje (hospedaje+transporte)</label> <input
-										type="number" class="form-control" name="precio" id="precio"
+										type="number" class="form-control" name="precio" id="precio" value="${precioTotal.getPrecio() * precioTotal.getDias() + precioTotalTrans.getPrecio()}"
 										required>
 								</div>
 								<input type="hidden" name="idUsuario" id="idUsuario" value="${id}">
 								<div class="form-group">
 
-=======
-								
->>>>>>> prueba2
 									<label for="calificacion">Calificación del Viaje:</label>
 									<div class="estrellas">
 										<input type="hidden" class="form-control" name="calificacion"

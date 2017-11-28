@@ -63,10 +63,16 @@
 				</div>
 				</div>
 
-<div class="col-lg-6">
+<div class="col-lg-3">
 				<div class="form-group">
-					<label for="precio">Precio por noche:</label> <input type="text"
+					<label for="precio">Precio por noche:</label> <input type="number"
 						class="form-control" name="precio" id="precio" required>
+				</div>
+				</div>
+<div class="col-lg-3">
+				<div class="form-group">
+					<label for="días">Cantidad de días:</label> <input type="number"
+						class="form-control" name="dias" id="dias" required>
 				</div>
 				</div>
 

@@ -1,5 +1,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${nombre == null}" > 	
+<c:redirect url="/login" /> 
+</c:if>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,21 +17,7 @@
 	    <title>Manejate.com</title>
 	</head>
 	<body>
-	
-	<nav class="navbar navmenu">
-		<div class="container-fluid">
-    	<!-- Brand and toggle get grouped for better mobile display -->
-    		<div class="navbar-header">
-      			<a class="navbar-brand" href="/TpFinal-java/"><img src=../../img/manejate.png width=150></a>
-    		</div>
-    		
-       		<ul class="nav navbar-nav navbar-right">
-        		<li><a href="/TpFinal-java/login">Ingresar</a></li>
-        		<li><a href="/TpFinal-java/registroUsuario">Registrate</a></li>
-       		</ul>
-       		
-    	</div>
-	</nav>
+	<jsp:include page="menuPanel.jsp" />
 	<div id="listar" >
 	<div class="texto">
 		<c:forEach var="lista" items="${lista}">
@@ -51,12 +40,7 @@
 			</ul>
 			
 		</c:forEach>
-    </div>
+   </div>
     </div>
 	</body>
 	</html>
-
-	
-
-
-

@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioHospedaje;
+import ar.edu.unlam.tallerweb1.servicios.ServicioTransporte;
 
 
 
@@ -18,6 +19,8 @@ public class ControladorCargaHospedaje {
 	
 	@Inject
 	private ServicioHospedaje servicioHospedaje;
+	@Inject
+	private ServicioTransporte servicioTransporte;
 	
 	
 	
@@ -28,17 +31,18 @@ public class ControladorCargaHospedaje {
 		return new ModelAndView("cargarHospedaje");
 	}
 	
+	//metodo para guardar el hospedaje y este a su vez envía  la vista de viaje valores de precio hospedaje, 
+	//cant dias y precio transporte para que muestre el total de lo gastado en el viaje
 	@RequestMapping(path="/cargar-hospedaje", method=RequestMethod.POST)
 	public ModelAndView cargarRuta(@ModelAttribute("hospedaje") Hospedaje hospedaje, HttpServletRequest request){
-		/*
-		Long idRuta = (Long) request.getSession().getAttribute("idRuta");
-		Ruta miRuta = servicioRuta.consultarRutaPorId(idRuta);
-		System.out.println("EL ID DE LA RUTA ES"+ idRuta);
-		
-		hospedaje.setRuta(miRuta);*/ //Aca intento guardar la foreingKey que viene de Ruta, no me sale pero es algo así.
 		
 		servicioHospedaje.agregarHospedaje(hospedaje);
-		return new ModelAndView("cargaViaje"); //Vista lista destino + hospedaje!
+		ModelAndView mav = new ModelAndView("cargaViaje");
+		mav.addObject("precioTotalTrans", servicioTransporte.consultarUltimoRegistroDeTransporte());
+		mav.addObject("precioTotal", servicioHospedaje.consultarUltimoRegistroDeHospedaje());
+		return mav;
+		
+		
 	}
 
 	@RequestMapping(path="/misExperiencias", method=RequestMethod.GET)

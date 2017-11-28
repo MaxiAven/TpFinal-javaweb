@@ -34,9 +34,6 @@
       <tr>
         <th>Nombre Viaje</th>
          <th>Calificación</th>
-          <th>Imagen</th>
-          <th>Imagen</th>
-          <th>Imagen</th>
           <th>Sugerencia</th>
           <th>Sugerencia</th>
           <th>Sugerencia</th>
@@ -48,9 +45,6 @@
       <tr>
         <td>${v.nombre}</td>
         <td>${v.calificacion}</td>
-        <td>${v.img1}</td>
-        <td>${v.img2}</td>
-        <td>${v.img3}</td>
         <td>${v.sug1}</td>
         <td>${v.sug2}</td>
         <td>${v.sug3}</td>

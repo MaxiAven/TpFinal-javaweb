@@ -21,6 +21,13 @@ public class Hospedaje {
 	private String tipoHospedaje;
 	private String ubicacion;
 	private float precio;
+	private int dias;
+	public int getDias() {
+		return dias;
+	}
+	public void setDias(int dias) {
+		this.dias = dias;
+	}
 	private String servicios;
 	private int calificacion;
 	

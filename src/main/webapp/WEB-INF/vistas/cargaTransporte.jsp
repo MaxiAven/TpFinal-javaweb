@@ -126,16 +126,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     			<input type="number" class="form-control" name="precio" id="precio" required>
   			</div>
   			</div>
-  			<div class="col-lg-6">
-  			<div class="form-group">
-
-    			<label for="calificacion">Calificación del Viaje:</label>
-    			<div class="estrellas">
-    				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="0">
-    			</div>
-  			</div> 
-  			</div>
-  			<div class="col-lg-2">
+  			<div class="col-lg-3">
   			<label for="tipo">Tipo de transporte</label>
    				 	<select class="form-control" name="tipo" id="tipo">
    				 		
@@ -145,6 +136,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
    				 		<option value="tren">Tren</option>
    				 		<option value="otros">Otros</option>
    				 	</select>
+  			</div>
+  			<div class="col-lg-3">
+  			<div class="form-group">
+
+    			<label for="calificacion">Calificación del Viaje:</label>
+    			<div class="estrellas">
+    				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="0">
+    			</div>
+  			</div> 
   			</div>
   			<div class="col-lg-12">
   			<div class="form-group">
