@@ -165,6 +165,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
     			</div>
   			</div> 
   			</div>
+  			<div class="col-lg-2">
+  			<label for="tipo">Tipo de transporte</label>
+   				 	<select class="form-control" name="tipo" id="tipo">
+   				 		
+   				 		<option value="auto">Auto</option>
+   				 		<option value="bus">Bus</option>
+   				 		<option value="avion">Avion</option>
+   				 		<option value="tren">Tren</option>
+   				 		<option value="otros">Otros</option>
+   				 	</select>
+  			</div>
   			<div class="col-lg-12">
   			<div class="form-group">
 

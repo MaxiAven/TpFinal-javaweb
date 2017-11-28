@@ -52,4 +52,7 @@ public class ServicioViajeImpl implements ServicioViaje{
 		
 		return servicioViajeDao.listaMisViajes(id);
 	}
+	public List<Viaje> mostrarExperienciaDeViaje(Long id) {
+		   return servicioViajeDao.mostrarExperienciaDeViaje(id);
+		}
 }

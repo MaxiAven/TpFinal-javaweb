@@ -85,13 +85,15 @@ public class ViajeDaoImpl implements ViajeDao{
 		return (List<Viaje>) sesion.createCriteria(Viaje.class)
 				.add(Restrictions.eq("usuario.id",id)).list();
 	}
-	
-	/*@Override
-	public Viaje historiaDeViaje(Long id) {
-		final Session sesion =  sessionFactory.getCurrentSession();
-		return sesion.createCriteria(Viaje.class).list();
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Viaje>  mostrarExperienciaDeViaje(Long id) {
+		final Session session =  sessionFactory.getCurrentSession();
+	//	return  sesion.createCriteria(Viaje.class).list();
+		Criteria Busqueda =session.createCriteria(Viaje.class);
+		Busqueda.add(Restrictions.eq("idViaje",id));
+		return Busqueda.list();
 	}
-*/
 	
 
 

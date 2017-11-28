@@ -21,6 +21,7 @@ public class Transporte {
 	private int calificacion;
 	private float precio;
     private String descripcion;
+    private String tipo;
    
     @OneToMany (mappedBy="transporte", cascade = CascadeType.ALL)
     private List<Viaje> viajes = new ArrayList <Viaje>();
@@ -89,6 +90,14 @@ public class Transporte {
 
 	public void setViajes(List<Viaje> viajes) {
 		this.viajes = viajes;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 

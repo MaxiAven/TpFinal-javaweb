@@ -46,7 +46,7 @@
         <td>${lista.getNombre()}</td>
         <td>${lista.usuario.getNombre()}</td>
         <td>${lista.transporte.getLlegada() }</td>
-        <td><a href="#">Ver detalles</a></td>
+        <td><a href="listaExperienciaDeViaje/id/${lista.getIdViaje()}">Ver detalles</a></td>
       </tr>
     </tbody>
     </c:forEach>

@@ -22,6 +22,7 @@ public class Hospedaje {
 	private String ubicacion;
 	private float precio;
 	private String servicios;
+	private int calificacion;
 	
 	 @OneToMany (mappedBy="hospedaje", cascade = CascadeType.ALL)
 	    private List<Viaje> viajes = new ArrayList <Viaje>();
@@ -79,6 +80,12 @@ public class Hospedaje {
 	}
 	public void setServicios(String servicios) {
 		this.servicios = servicios;
+	}
+	public int getCalificacion() {
+		return calificacion;
+	}
+	public void setCalificacion(int calificacion) {
+		this.calificacion = calificacion;
 	}
 	
 	

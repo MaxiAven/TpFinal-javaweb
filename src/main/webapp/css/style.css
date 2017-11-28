@@ -56,6 +56,31 @@ body{
 	
 	color:#000;
 }
+#listar{
+	background-image:url("../img/postal.jpg") ;
+	width:1100px;
+	height:650px; 
+	border:solid;
+	background-size:cover;
+	margin-left:13%;
+	
+}
+.texto{
+	margin-top:20%;
+	margin-left:15%;
+	width:700px;
+	height:350px;
+	font-family:Papyrus, fantasy;
+	font-size:23px;
+	color:black;
+	font-weight:700; 
+}
+
+.destacar{
+	font-style: italic;
+	
+	
+}
 
 .fondoFormulario{
 	

@@ -41,6 +41,11 @@
 										type="text" class="form-control" name="nombre" id="nombre"
 										required>
 								</div>
+								<div class="form-group">
+									<label for="nombreViaje">Cual fue el costo total del viaje (hospedaje+transporte)</label> <input
+										type="number" class="form-control" name="precio" id="precio"
+										required>
+								</div>
 								<input type="hidden" name="idUsuario" id="idUsuario" value="${id}">
 								<div class="form-group">
 
@@ -51,24 +56,7 @@
 									</div>
 								</div>
 								<div class="panel panel-default">
-									<div class="panel-heading">Compartí fotos de tu viaje</div>
-									<div class="panel-body">
-										<div class="form-group">
-											<input type="file" id="img1" name="img1">
-											<p class="help-block">Subí tu imagen</p>
-										</div>
-
-
-										<div class="form-group">
-											<input type="file" id="img2" name="img2">
-											<p class="help-block">Subí tu imagen</p>
-										</div>
-
-
-										<div class="form-group">
-											<input type="file" id="img3" name="img3">
-											<p class="help-block">Subí tu imagen</p>
-										</div>
+									
 										<a href="#" id="btnSug">Sugerir lugares para visitar</a>
 										<a href="#" id="btnSugOcultar">Ocultar sugerencias</a>
 										<div id="sugerencias">

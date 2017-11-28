@@ -19,7 +19,7 @@
 			<td>${lista.getTransporte().getSalida()} - ${lista.getTransporte().getLlegada()}</td>
 		 	<td>${lista.getTransporte().getLugar()}</td> 
 		    	<td>${lista.getPrecio()}</td>
- 			<td><a href="">Ver descripcion</a></td>
+ 			<td><a href="listaExperienciaDeViaje/id/${lista.getIdViaje()}">Ver descripcion</a></td>
 			
 			
 		</tr>
