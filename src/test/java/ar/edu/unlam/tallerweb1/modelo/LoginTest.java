@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.junit.Test;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -51,8 +52,10 @@ public class LoginTest {
 		when(servicioMock.consultarUsuario(usuarioMock)).thenReturn(usuarioMock);
 		when(request.getSession()).thenReturn(sessionMock);
 		
+		
 		ModelAndView mav = controladorLogin.validarLogin(usuarioMock, request);
-		assertThat(mav.getViewName()).isEqualTo("panel");
+		assertThat(mav.getViewName()).isEqualTo("redirect:/misViajes");
+		
 		
 	}
 	

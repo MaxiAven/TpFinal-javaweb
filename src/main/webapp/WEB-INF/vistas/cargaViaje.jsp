@@ -15,12 +15,12 @@
 </head>
 <body>
 	<!-- menu que el usuario al logearse -->
-<c:if test="${nombre == null}" > 	
-<c:redirect url="/login" /> 
-</c:if>
 
 <c:if test="${nombre != null}" > 	
 <jsp:include page="menuPanel.jsp" />
+<c:if test="${nombre == null}" > 	
+<c:redirect url="/login" /> 
+</c:if>
 </c:if>
 
 	<div class="container">
@@ -41,9 +41,7 @@
 										type="text" class="form-control" name="nombre" id="nombre"
 										required>
 								</div>
-								<input type="hidden" name="idUsuario" id="idUsuario" value="${id}">
-								<div class="form-group">
-
+								
 									<label for="calificacion">Calificación del Viaje:</label>
 									<div class="estrellas">
 										<input type="hidden" class="form-control" name="calificacion"

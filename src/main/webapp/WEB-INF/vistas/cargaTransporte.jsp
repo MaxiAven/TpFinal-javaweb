@@ -102,14 +102,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
   			<div class="col-lg-4">
   			<div class="form-group">
    				 <label for="llegada">Llegada</label>
-    			 <input type="text" class="form-control" name="llegada" id="llegada" onblur="calcRoute();">
+    			 <input type="text" class="form-control" name="llegada" id="llegada" onblur="calcRoute();" required>
   			</div>
   			</div>
   			
   			<div class="col-lg-4">
   			<div class="form-group">
    				 <label for="llegada">Elegi tu destino:</label>
-   				 	<select class="form-control" name="lugar" id="lugar">
+   				 	<select class="form-control" name="lugar" id="lugar" required>
    				 		<option value="">Seleccione una opción</option>
    				 		<option value="playa">Playa</option>
    				 		<option value="montana">Montaña</option>
@@ -119,41 +119,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
    				 	</select>
   			</div>
   		</div>
- <!-- Comento TIPO HOSPEDAJE -->
- 
-   			<!--  <div class="col-lg-4">
-  			<div class="form-group">
-   				 <label for="llegada">Tipo Hospedaje:</label>
-   				 	<select class="form-control" name="tipoHospedaje" id="tipoHospedaje">
-   				 		<option value="">Seleccione una opción</option>
-   				 		<option value="hotel">Hotel</option>
-   				 		<option value="hostel">Hostel</option>
-   				 		<option value="casa">Casa</option>
-   				 		<option value="departamento">Departamento</option>
-   				 		<option value="otros">Otros</option>
-   				 	</select>
-   				 <!-- <select class="form-control" name="tipoHospedaje" id="tipoHospedaje">
-
-   				 <label for="llegada">Tipo Hospedaje:</label>
-   				 <select class="form-control" name="tipoHospeaje" id="tipoHospeaje">
-
-   				 	<option value="">Seleccione una opción</option>
-   				 	<c:forEach items="${listaHospedaje}" var="lista">
-   				 		<option value="${lista.getTipoHospedaje()}">${lista.getTipoHospedaje()}</option>
-   				 	</c:forEach>
-   				 	
-
-   				 </select> 
-
-
-   			</div>
-   			</div> -->
-   			
    			
    			<div class="col-lg-6">
    			<div class="form-group">
     			<label for="precio">Precio:</label>
-    			<input type="number" class="form-control" name="precio" id="precio">
+    			<input type="number" class="form-control" name="precio" id="precio" required>
   			</div>
   			</div>
   			<div class="col-lg-6">
@@ -169,57 +139,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
   			<div class="form-group">
 
     			<label for="descripcion">Comentario:</label>
-    			<textarea class="form-control" name="descripcion" id="descripcion"></textarea>
+    			<textarea class="form-control" name="descripcion" id="descripcion" required></textarea>
   			</div>
   			<div id="map-canvas" style=" width:100%; height:400px"></div>
   			
   			
-  			    <script type="text/javascript">
-            function toggle(elemento) {
-                   if(elemento.value=="si"){
-                       document.getElementById("uno").style.display = "block";
-                       document.getElementById("dos").style.display = "none";
-                   }else{
-                       if(elemento.value=="no"){
-                           document.getElementById("uno").style.display = "none";
-                           document.getElementById("dos").style.display = "block";
-                       }  
-                   }
-                }
-            
-    </script>
     
     
-    
-        <div class="form-group">
-        <dl>
-            <dt><label for="tieneHospedaje">Quiere contarnos su hospedaje?</label></dt>
-            <dd>
-                <input type="radio" name="tieneHospedaje" onclick="toggle(this)" value="si" > Quiero aportar información de un Hospedaje Turístico<br>
-                <input type="radio" name="tieneHospedaje" onclick="toggle(this)" value="no"> No, gracias!<br>
-            </dd>
-        </dl>
-    </div>
-    
+    <button class="btn btn-primary" type="submit"  id="abrirHospedaje">Cargar mi Viaje</button>
+      
     </form:form>
-     
-    <div id="uno" style="display:none">
+  
     		
-    	
-    		<button class="btn btn-primary" type="submit"  id="abrirHospedaje">Cargar mi Viaje y deseo cargar Hospedaje</button>
-    </div>
-    
-      <div id="dos" style="display:none">
-    		<button class="btn btn-primary" type="submit">Cargar sólo mi Viaje</button>
-    </div>
-    
-    			 
-  			
-					
-					<button class="btn btn-default" type="reset">Limpiar todo</button>
-				
-  				
-  			
+   </div>
+   	
 		</div>
 		</div>
 		<!-- fin div del form -->

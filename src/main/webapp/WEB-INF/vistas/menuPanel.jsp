@@ -4,8 +4,8 @@
 <html>
 	<head>
 	<!-- Bootstrap core CSS -->
+	<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" >
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/starrr.css" rel="stylesheet" >
 	    <link href="css/bootstrap.min.css" rel="stylesheet" >
 	    <link href="css/style.css" rel="stylesheet" >
 	    <!-- Bootstrap theme -->

@@ -38,7 +38,7 @@
 <div class="col-lg-6">
 				<div class="form-group">
 					<label for="tipoHospedaje">Tipo Hopedaje:</label> 
-					<select class="form-control" name="lugar" id="lugar">
+					<select class="form-control" name="lugar" id="lugar" required>
    				 		<option value="">Seleccione una opción</option>
    				 		<option value="hotel">Hotel</option>
    				 		<option value="hostel">Hostel</option>
@@ -52,21 +52,21 @@
 <div class="col-lg-6">
 				<div class="form-group">
 					<label for="nombre">Nombre del hospedaje:</label> <input
-						type="text" class="form-control" name="nombre" id="nombre">
+						type="text" class="form-control" name="nombre" id="nombre" required>
 				</div>
 				</div>
 
 <div class="col-lg-6">
 				<div class="form-group">
 					<label for="ubicacion">Ubicación del hospedaje:</label> <input
-						type="text" class="form-control" name="ubicacion" id="ubicacion">
+						type="text" class="form-control" name="ubicacion" id="ubicacion" required>
 				</div>
 				</div>
 
 <div class="col-lg-6">
 				<div class="form-group">
 					<label for="precio">Precio por noche:</label> <input type="text"
-						class="form-control" name="precio" id="precio">
+						class="form-control" name="precio" id="precio" required>
 				</div>
 				</div>
 
@@ -74,7 +74,7 @@
 				<div class="form-group">
 					<label for="descripcion">Descripción:</label>
 					<textarea class="form-control" rows="3" name="descripcion"
-						id="descripcion"></textarea>
+						id="descripcion" required></textarea>
 				</div>
 				</div>
 
