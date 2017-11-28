@@ -64,7 +64,7 @@ public class ControladorLogin {
 
 	@RequestMapping(path = "/panel", method = RequestMethod.GET)
 	public ModelAndView irAPanel() {
-		return new ModelAndView("misViajes");
+		return new ModelAndView("redirect:/misViajes");
 	}
 	
 	@RequestMapping(path = "/todosLosViajes", method = RequestMethod.GET)
