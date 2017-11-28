@@ -3,7 +3,10 @@ language: java
 notifications:
 email:
 recipients:
+<<<<<<< HEAD
 - maximilianoariela@gmail.com
+=======
+>>>>>>> prueba2
 - alejandro.franzot@gmail.com
 - gonzalvomartin@gmail.com
 - villalva.nadia@gmail.com

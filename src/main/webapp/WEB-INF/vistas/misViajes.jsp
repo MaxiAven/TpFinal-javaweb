@@ -28,11 +28,8 @@
      <div class="page-header">
         <h2>Mis Viajes</h2>
     </div>
-    <!--<c:if test="${not empty listaVacia}">
-              <div class="alert alert-danger" role="alert">${listaVacia}</div>
-              <br>
-            </c:if> -->
-             <table class="table table-hover">
+    
+   <table class="table table-hover">
     <thead>
       <tr>
         <th>Nombre Viaje</th>

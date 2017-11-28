@@ -54,7 +54,7 @@ public class ControladorLogin {
 			request.getSession().setAttribute("nombre", usuarioBuscado.getNombre());
 			request.getSession().setAttribute("id", usuarioBuscado.getIdUsuario());
 			
-			return new ModelAndView("panel");
+			return new ModelAndView("redirect:/misViajes");
 		} else {
 			
 			model.put("error", "Usuario o clave incorrecta");
@@ -64,7 +64,7 @@ public class ControladorLogin {
 
 	@RequestMapping(path = "/panel", method = RequestMethod.GET)
 	public ModelAndView irAPanel() {
-		return new ModelAndView("panel");
+		return new ModelAndView("misViajes");
 	}
 	
 	@RequestMapping(path = "/todosLosViajes", method = RequestMethod.GET)
@@ -85,6 +85,8 @@ public class ControladorLogin {
 		
 		modelo.put("viaje", listaViaje);
 		return new ModelAndView ("misViajes", modelo);
+		
+		
 	}
 	
 	
@@ -149,8 +151,7 @@ public class ControladorLogin {
  		viaje.setHospedaje(miHospedaje);
  		
 		servicioViaje.agregarViaje(viaje);
-		
-		return new ModelAndView("panel");
+		return new ModelAndView("redirect:/misViajes");
 	}
 	
 	@RequestMapping(path = "/logout")
