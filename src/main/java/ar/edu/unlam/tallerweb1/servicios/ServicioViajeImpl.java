@@ -55,4 +55,16 @@ public class ServicioViajeImpl implements ServicioViaje{
 	public List<Viaje> mostrarExperienciaDeViaje(Long id) {
 		   return servicioViajeDao.mostrarExperienciaDeViaje(id);
 		}
+	@Override
+	public List<Viaje> buscarPorDestino(String lugar) {
+		
+		return servicioViajeDao.buscarPorDestino( lugar);
+	}
+	
+	@Override
+	public List<Viaje> listarMayorCalificacion() {
+		
+		return servicioViajeDao.listarMayorCalificacion( );
+	}
+	
 }

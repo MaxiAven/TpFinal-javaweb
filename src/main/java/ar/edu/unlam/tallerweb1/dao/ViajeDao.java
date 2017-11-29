@@ -15,4 +15,7 @@ public interface ViajeDao {
 	public List<Viaje> listarTodosLosViajes();
 	public List<Viaje> listaMisViajes(Long id);
 	public List<Viaje> mostrarExperienciaDeViaje(Long id);
+	public List<Viaje> buscarPorDestino(String lugar);
+	public List<Viaje> listarMayorCalificacion();
+	
 }
