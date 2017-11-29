@@ -30,7 +30,7 @@ public class LoginTest {
 		controladorLogin.setServicioLogin(servicioMock);
 		
 		ModelAndView mav = controladorLogin.validarLogin(usuarioMock, request);
-		assertThat(mav.getViewName()).isEqualTo("lgin");
+		assertThat(mav.getViewName()).isEqualTo("login");
 		assertThat(mav.getModel().get("error")).isEqualTo("Usuario o clave incorrecta");
 	}
 	
