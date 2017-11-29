@@ -48,6 +48,14 @@
         <td>${v.sug1}</td>
         <td>${v.sug2}</td>
         <td>${v.sug3}</td>
+         <td>
+        <form:form action="verDetalles" method="POST" modelAttribute="viaje">
+				<input name="idViaje" id="idViaje" type="hidden" value="${v.idViaje}" size="50" type="text">
+						<input name="nombre" id="nombre" type="hidden" value="${v.nombre}" size="50" type="text">
+				<button type="submit" class="btn btn-default">Ver Detalle</button>
+			</form:form>
+        
+        </td>
       </tr>
     </tbody>
     </c:forEach>

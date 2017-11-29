@@ -12,4 +12,5 @@ public interface HospedajeDao {
 	public void agregarHospedaje(Hospedaje hospedaje);
 	public List<Hospedaje> listarTipoHospedaje();
 	public Hospedaje consultarUltimoRegistroDeHospedaje();
+	public List<Hospedaje> listarHospedajeEspecifico(Long id);
 }

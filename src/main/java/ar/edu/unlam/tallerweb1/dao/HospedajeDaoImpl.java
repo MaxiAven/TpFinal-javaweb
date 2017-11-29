@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
@@ -42,5 +43,13 @@ public class HospedajeDaoImpl implements HospedajeDao{
 	}
 	
 
+	@Override
+	public List<Hospedaje> listarHospedajeEspecifico(Long id){
+		
+		final Session sesion =  sessionFactory.getCurrentSession();
+		
+		return (List<Hospedaje>) sesion.createCriteria(Hospedaje.class)
+				.add(Restrictions.eq("id",id)).list();
+	}
 
 }

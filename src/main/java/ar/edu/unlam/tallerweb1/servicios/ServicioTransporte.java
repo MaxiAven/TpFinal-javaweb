@@ -12,5 +12,6 @@ public interface ServicioTransporte {
 //	public List<Transporte> buscarPorPrecioYDestino(float precio, String lugar);
 	public List<Transporte> listarTipoTransporte();
 	public Transporte consultarUltimoRegistroDeTransporte();
+	public List<Transporte> listarTransporteEspecifico(Long id);
 
 }

@@ -89,6 +89,24 @@ public class ControladorLogin {
 		
 	}
 	
+
+	@RequestMapping(path = "verDetalles")
+	public ModelAndView verDetalles(@ModelAttribute ("viaje") Viaje viaje, HttpServletRequest request) {
+
+		
+		ModelMap modelo = new ModelMap(); 
+		Long viajeId = viaje.getIdViaje();
+		String viajeNombre = viaje.getNombre();
+
+		List<Transporte> listaTransporte = servicioTransporte.listarTransporteEspecifico(viajeId);
+		List<Hospedaje> listaHospedaje = servicioHospedaje.listarHospedajeEspecifico(viajeId);
+		
+		modelo.put("transporte", listaTransporte);
+		modelo.put("hospedaje", listaHospedaje);
+		modelo.put("viajeNombre", viajeNombre);
+	
+		return new ModelAndView ("panelDetalle", modelo);
+	}
 	
 	
 	

@@ -60,6 +60,10 @@ public class ServicioTransporteImp implements ServicioTransporte{
 		return servicioTransporteDao.consultarUltimoRegistroDeTransporte();
 	}
 	
-	
+	@Override
+public List<Transporte> listarTransporteEspecifico(Long id){
+		
+		return servicioTransporteDao.listarTransporteEspecifico(id);
+	}
 	
 }
