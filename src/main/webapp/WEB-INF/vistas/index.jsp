@@ -31,68 +31,96 @@
     	
     		</div>
     		</form:form>
-    		
-    		<form:form action="listaDestino" method="GET">
-			
-			<div class="col-lg-10">
-				<div class="col-lg-10">
-					<h3>Busca las mejores referencias de tu destino</h3>
-				</div>
-			</div>
-    		<div class="col-lg-10">
 
-	    		 <div class="col-lg-4">
-	    		 
-	    		 	<select class="form-control input-lg" name=lugar>
-	    		 		<option value= >Elegí tu lugar</option>
-	    		 		<option value=playa>Playa</option>
-	    		 		<option value=montana>Montaña</option>
-	    		 		<option value=ciudad>Ciudad</option>
-	    		 		<option value="otros">Otros</option>
-	    		 	</select>
-	    		 </div>
-    		 <div class="col-lg-2">
-    		 	<input type="submit" class="btn btn-default btn-lg" value="Buscar">
-    		 </div>
-    	
-    		</div>
-    		</form:form>
-    		
-	
-    		<div class="col-lg-10">
-				<div class="col-lg-10">
-					<h3>Los 5 viajes con mayor calificación </h3>
-				</div>
-			
-	    		<table class="table table-condensed">
-						<tr>
-							<th>Nombre del Viaje</th>
-							<th>Destino</th>
-							<th>Calificación</th>
-							<th>Usuario</th>
-							<th>Detalles</th>
-						</tr>
-						<c:forEach items ="${lista}" var= "lista">
-						<tr>
-							<td>${lista.getNombre()}</td>
-							<td>${lista.getTransporte().getLlegada()}</td>
-						    <td>${lista.getCalificacion()}</td>
-							<td>${lista.getUsuario().getEmail()}</td>
-							<td><a href="listaExperienciaDeViaje/id/${lista.getIdViaje()}">Ver descripcion</a></td>
 
-						</tr>
-						</c:forEach>
-					</table>
-					
-			</div>
-    		
-    		
     		<div class="col-lg-1"></div>
+    		
+	    			<div class="col-lg-10">
+	    			<div class="col-lg-1"></div>
+	    		
+	  					<a href="#" id="btnSug">Buscar sugerencias de destinos</a>
+						<a href="#" id="btnSugOcultar">Ocultar busqueda</a>
+						<div id="sugerencias">
+							<form:form action="listaDestino" method="GET">
+								<div class="col-lg-10">
+									<div class="col-lg-1"></div>
+										<div class="col-lg-9">
+											<h3>Busca las mejores referencias de tu destino</h3>
+										</div>
+								</div>	
+					    		<div class="col-lg-10">
+								    <div class="col-lg-1"></div>
+								
+						    		 <div class="col-lg-4">
+						    		 
+						    		 	<select class="form-control input-lg" name=lugar>
+						    		 		<option value= >Elegí tu lugar</option>
+						    		 		<option value=playa>Playa</option>
+						    		 		<option value=montana>Montaña</option>
+						    		 		<option value=ciudad>Ciudad</option>
+						    		 		<option value="otros">Otros</option>
+						    		 	</select>
+						    		 </div>
+						    		 <div class="col-lg-2">
+						    		 	<input type="submit" class="btn btn-default btn-lg" value="Buscar">
+						    		 </div>
+					    	
+					    		</div>
+				    		</form:form>
+						</div>
+					</div>
+			
+	
+    	
+				<div class="col-lg-10">
+					<div class="col-lg-1"></div>
+					<div class="col-lg-9">
+						<h3>Los 5 viajes con mayor calificación </h3>
+					</div>
+				</div>
+				<div class="col-lg-10">
+				<div class="col-lg-1"></div>
+					<div class="col-lg-10">
+			    		<table class="table table-condensed">
+								<tr>
+									<th>Nombre del Viaje</th>
+									<th>Destino</th>
+									<th>Calificación</th>
+									<th>Usuario</th>
+									<th>Detalles</th>
+								</tr>
+								<c:forEach items ="${lista}" var= "lista">
+								<tr>
+									<td>${lista.getNombre()}</td>
+									<td>${lista.getTransporte().getLlegada()}</td>
+								    <td>${lista.getCalificacion()}</td>
+									<td>${lista.getUsuario().getEmail()}</td>
+									<td><a href="listaExperienciaDeViaje/id/${lista.getIdViaje()}">Ver descripcion</a></td>
+		
+								</tr>
+								</c:forEach>
+						</table>
+					</div>
+				</div>	
+			
+    		
     	</div>
 		
+		
+		
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/starrr.js"></script>
+		<script src="js/calificacion.js"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
 		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/funciones.js" type="text/javascript"></script>
+		
+		
 	</body>
 </html>
