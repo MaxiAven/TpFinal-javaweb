@@ -95,6 +95,26 @@ public class ViajeDaoImpl implements ViajeDao{
 		return Busqueda.list();
 	}
 	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Viaje> buscarPorDestino(String lugar) {
+		final Session session = sessionFactory.getCurrentSession();
+		Criteria Busqueda =session.createCriteria(Viaje.class); // creo criteria Busqueda 
+		Busqueda.createAlias("transporte", "trans")
+		.add(Restrictions.eq("trans.lugar",lugar));
+		return  Busqueda.list();
+		
+			} 
+		
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Viaje> listarMayorCalificacion() {
+		final Session session = sessionFactory.getCurrentSession();
+		return session.createCriteria(Viaje.class)
+				.addOrder(Order.desc("calificacion"))
+				.setMaxResults(5).list();
+	}
+	
 
 }

@@ -21,7 +21,22 @@ public class ControladorIndex {
 	@RequestMapping(path="/", method=RequestMethod.GET)
 	public ModelAndView inicio(){
 		
-		return new ModelAndView("index");
+		ModelAndView mav = new ModelAndView("index");
+		List<Viaje> listado = servicioViaje.listarMayorCalificacion();
+
+		mav.addObject("lista", listado);
+		return mav;
+		
+		//return new ModelAndView("index");
+	}
+	
+	@RequestMapping(path="/listaDestino")
+	public ModelAndView busquedaPorDestino(@RequestParam("lugar") String lugar){
+		
+		ModelAndView mav = new ModelAndView("resultadoBusquedaDestino");
+		List<Viaje> listado = servicioViaje.buscarPorDestino(lugar);
+		mav.addObject("lista", listado);
+		return mav;
 	}
 	
 	@RequestMapping(path="/listaResultado")
