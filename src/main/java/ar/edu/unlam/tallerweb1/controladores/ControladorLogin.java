@@ -88,6 +88,40 @@ public class ControladorLogin {
 		
 	}
 	
+<<<<<<< HEAD
+=======
+
+	@RequestMapping(path = "verDetalles")
+	public ModelAndView verDetalles(@ModelAttribute ("viaje") Viaje viaje, HttpServletRequest request) {
+
+		
+		ModelMap modelo = new ModelMap(); 
+		Long viajeId = viaje.getIdViaje();
+		String viajeNombre = viaje.getNombre();
+
+		List<Transporte> listaTransporte = servicioTransporte.listarTransporteEspecifico(viajeId);
+		List<Hospedaje> listaHospedaje = servicioHospedaje.listarHospedajeEspecifico(viajeId);
+		
+		modelo.put("transporte", listaTransporte);
+		modelo.put("hospedaje", listaHospedaje);
+		modelo.put("viajeNombre", viajeNombre);
+	
+		return new ModelAndView ("panelDetalle", modelo);
+	}
+	
+	
+	
+
+	
+	/*@RequestMapping(path="/verHistoria")
+	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("id") Long id ){
+		
+		ModelAndView mav = new ModelAndView("historiaDeUsuario");
+		List<Viaje> listado = servicioViaje.buscarPorPrecioYDestino(precio,lugar);
+		mav.addObject("lista", listado);
+		return mav;
+	}*/
+>>>>>>> master
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {

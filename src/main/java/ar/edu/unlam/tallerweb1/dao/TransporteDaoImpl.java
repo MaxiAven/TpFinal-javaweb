@@ -82,6 +82,13 @@ public class TransporteDaoImpl implements TransporteDao{
 					   .addOrder(Order.desc("idTransporte")).setMaxResults(1).uniqueResult();
 	}
 	
-	
+	@Override
+	public List<Transporte> listarTransporteEspecifico(Long id){
+		
+		final Session sesion =  sessionFactory.getCurrentSession();
+		
+		return (List<Transporte>) sesion.createCriteria(Transporte.class)
+				.add(Restrictions.eq("id",id)).list();
+	}
 
 }

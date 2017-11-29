@@ -38,7 +38,11 @@
 <div class="col-lg-6">
 				<div class="form-group">
 					<label for="tipoHospedaje">Tipo Hopedaje:</label> 
+<<<<<<< HEAD
 					<select class="form-control" name="tipoHospedaje" id="lugar" required>
+=======
+					<select class="form-control" name="tipoHospedaje" id="tipoHospedaje" required>
+>>>>>>> master
    				 		<option value="">Seleccione una opción</option>
    				 		<option value="hotel">Hotel</option>
    				 		<option value="hostel">Hostel</option>

@@ -38,4 +38,11 @@ public class ServicioHospedajeImpl implements ServicioHospedaje{
 		return servicioHospedajeDao.consultarUltimoRegistroDeHospedaje();
 	}
 
+	@Override
+
+	public List<Hospedaje> listarHospedajeEspecifico(Long id){
+			
+			return servicioHospedajeDao.listarHospedajeEspecifico(id);
+		}
+
 }

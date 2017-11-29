@@ -21,6 +21,7 @@ public interface TransporteDao {
 	public List<Transporte> listarTipoTransporte();
 	
 	public Transporte consultarUltimoRegistroDeTransporte();
+	public List<Transporte> listarTransporteEspecifico(Long id);
 
 }
 
