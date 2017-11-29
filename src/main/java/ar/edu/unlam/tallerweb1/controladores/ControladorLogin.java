@@ -81,7 +81,6 @@ public class ControladorLogin {
 		ModelMap modelo = new ModelMap();
 		Long id = (Long) request.getSession().getAttribute("id"); 
 		List<Viaje> listaViaje= servicioViaje.listaMisViajes(id);
-		//System.out.println("el id de usuario es"+ id);
 		
 		modelo.put("viaje", listaViaje);
 		return new ModelAndView ("misViajes", modelo);
@@ -89,19 +88,6 @@ public class ControladorLogin {
 		
 	}
 	
-	
-	
-	
-
-	
-	/*@RequestMapping(path="/verHistoria")
-	public ModelAndView busquedaPorPrecioYDestino(@RequestParam("id") Long id ){
-		
-		ModelAndView mav = new ModelAndView("historiaDeUsuario");
-		List<Viaje> listado = servicioViaje.buscarPorPrecioYDestino(precio,lugar);
-		mav.addObject("lista", listado);
-		return mav;
-	}*/
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {
