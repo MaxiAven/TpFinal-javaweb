@@ -88,8 +88,6 @@ public class ControladorLogin {
 		
 	}
 	
-<<<<<<< HEAD
-=======
 
 	@RequestMapping(path = "verDetalles")
 	public ModelAndView verDetalles(@ModelAttribute ("viaje") Viaje viaje, HttpServletRequest request) {
@@ -121,7 +119,6 @@ public class ControladorLogin {
 		mav.addObject("lista", listado);
 		return mav;
 	}*/
->>>>>>> master
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {
