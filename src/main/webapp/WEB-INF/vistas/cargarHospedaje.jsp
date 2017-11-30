@@ -84,20 +84,6 @@
 				</div>
 				</div>
 
-<!-- 				<div class="form-group"> -->
-<!-- 					<input name="img1" id="img1" type="file" class="file" -->
-<!-- 						data-preview-file-type="any" required> -->
-<!-- 				</div> -->
-
-<!-- 				<div class="form-group"> -->
-<!-- 					<input name="img2" id="img2" type="file" class="file" -->
-<!-- 						data-preview-file-type="any" required> -->
-<!-- 				</div> -->
-
-<!-- 				<div class="form-group"> -->
-<!-- 					<input name="img3" id="img3" type="file" class="file" -->
-<!-- 						data-preview-file-type="any" required> -->
-<!-- 				</div> -->
 <div class="col-lg-12">
 <div class="form-group">
 					<label for="servicios" >Qué servicios ofrece?</label>
@@ -138,13 +124,12 @@
 
     			<label for="calificacion">Calificación del Hospedaje:</label>
     			<div class="estrellas">
-    				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="0">
+    				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="3">
     			</div>
   			</div> 
 
 
-				<button type="submit" class="btn btn-default">Cargar
-					Hospedaje</button>
+				<button type="submit" class="btn btn-default">Siguiente</button>
 </div>
 			</form:form>
 			</div>

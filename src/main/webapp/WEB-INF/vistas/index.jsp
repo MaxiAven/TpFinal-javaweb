@@ -11,12 +11,12 @@
     		<div class="col-lg-10">
     		<form:form action="listaResultado" method="GET">
     		 <div class="col-lg-7">
-    		
+    			
     		 	<input type="text"  value=0 class="form-control input-lg" name="precio" id="precio" placeholder="Ingresa tu presupuesto (ej: $1000)">
     		 	
     		 </div>
     		 <div class="col-lg-3">
-    		 
+    		
     		 	<select class="form-control input-lg" name=lugar>
     		 		<option value= >Elegí tu lugar</option>
     		 		<option value=playa>Playa</option>
@@ -32,7 +32,7 @@
     		 
     		
     		  	 <!-- div que contiene buscador de sugerencias -->
-    		 <div class="col-lg-12">
+    		 <div class="col-lg-12 links">
 	    	
 	  			<a href="#" id="btnSug" style="color:#fff"><strong>Buscar sugerencias de destinos</strong></a>
 				<a href="#" id="btnSugOcultar" style="color:#fff"><strong>Ocultar busqueda</strong></a>
@@ -91,7 +91,7 @@
 									<td>${lista.getNombre()}</td>
 									<td>${lista.getTransporte().getLlegada()}</td>
 								    <td>${lista.getCalificacion()}</td>
-									<td>${lista.getUsuario().getEmail()}</td>
+									<td>${lista.getUsuario().getNombre()} ${lista.getUsuario().getApellido()}</td>
 									<td><a href="listaExperienciaDeViaje/id/${lista.getIdViaje()}">Ver descripcion</a></td>
 		
 								</tr>

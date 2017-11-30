@@ -53,7 +53,7 @@
 									<label for="calificacion">Calificación del Viaje:</label>
 									<div class="estrellas">
 										<input type="hidden" class="form-control" name="calificacion"
-											id="calificacion" value="0">
+											id="calificacion" value="3">
 									</div>
 								</div>
 								<div class="panel panel-default">

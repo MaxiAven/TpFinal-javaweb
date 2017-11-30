@@ -59,10 +59,16 @@ public class LoginTest {
 	
 	//test para validar la correcta carga de un viaje
 	@Test
-	public void crearCargaViajes(){
+	public void crearCargaViajesYListarlos(){
 		
-	
+		ControladorLogin controladorLogin = new ControladorLogin();
+		Viaje viajeMock = mock(Viaje.class);
+		ServicioLogin servicioMock = mock(ServicioLogin.class);
 		ServicioViaje servicioViajeMock = mock(ServicioViaje.class);
+		controladorLogin.setServicioLogin(servicioMock);
+		
+		servicioViajeMock.agregarViaje(viajeMock);
+		
 		List<Viaje> listarViajes = servicioViajeMock.listarTodosLosViajes();
 		assertThat(listarViajes).isNotNull();
 	}

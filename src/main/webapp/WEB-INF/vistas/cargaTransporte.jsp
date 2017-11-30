@@ -142,7 +142,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     			<label for="calificacion">Calificación del Viaje:</label>
     			<div class="estrellas">
-    				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="0">
+    				<input type="hidden" class="form-control" name="calificacion" id="calificacion" value="3">
     			</div>
   			</div> 
   			</div>
@@ -157,7 +157,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   			
     
     
-    <button class="btn btn-primary" type="submit"  id="abrirHospedaje">Cargar mi Viaje</button>
+    <button class="btn btn-primary" type="submit"  id="abrirHospedaje">Siguiente</button>
       
     </form:form>
   

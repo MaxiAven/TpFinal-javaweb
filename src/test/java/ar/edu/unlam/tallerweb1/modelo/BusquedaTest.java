@@ -1,28 +1,49 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import javax.servlet.http.HttpServletRequest;
+
+import java.util.List;
+import java.util.ArrayList;
 import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class BusquedaTest {
-	@Test
-	public void busquedaSoloPorPrecio(){
-		Viaje viaje1=new Viaje();
-		viaje1.setCalificacion(4);
-		viaje1.setNombre("Mardel magico");
-		viaje1.setPrecio(500);
-		
-		
+
+import static org.mockito.Mockito.*;
+
+import ar.edu.unlam.tallerweb1.SpringTest;
+import ar.edu.unlam.tallerweb1.controladores.ControladorIndex;
+import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
+import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
+
+public class BusquedaTest  extends SpringTest{
+	 @Test
+	 public void busquedaSoloPorPrecio(){
+	  
+	  ControladorIndex controladorIndex = new ControladorIndex();
+	  HttpServletRequest request = mock(HttpServletRequest.class);
+	  ServicioViaje servicioViajeMock = mock(ServicioViaje.class);
+	  controladorIndex.setServicioViaje(servicioViajeMock);
+	  
+	  
+	  float precio=501;
+	   String lugar="mendoza";
+	  
+	  Viaje viaje1=new Viaje();
+	  viaje1.setPrecio(500);
+	  //getSession().save(viaje1);
+	  
+	  Transporte transporte1=new Transporte();
+	  transporte1.setLugar("mendoza");
+	  //getSession().save(transporte1);
+	  
+	  viaje1.setTransporte(transporte1);
+	 
+	  
+	  //servicioViajeMock.buscarPorPrecioYDestino(precio, lugar);
+	 
+	  List<Viaje> listaResultado=servicioViajeMock.buscarPorPrecioYDestino(precio, lugar);
+	  assertThat(listaResultado).isNotNull();
+	    
+	 }
+
 	}
-
-}
-//Farmacia farmacia1= new Farmacia();
-//farmacia1.setNombre("Ted");
-//farmacia1.setTelefono("47534288");
-//farmacia1.setDiaDeTurno("martes");
-//getSession().save(farmacia1);
-//
-//Direccion direccion1=new Direccion();
-//direccion1.setCalle("riobamba");
-//direccion1.setNumero("659");
-//getSession().save(direccion1);
-//
-//farmacia1.setDireccion(direccion1);

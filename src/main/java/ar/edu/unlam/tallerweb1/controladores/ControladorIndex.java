@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
+import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
 import ar.edu.unlam.tallerweb1.servicios.ServicioViaje;
 @Controller
 public class ControladorIndex {
@@ -18,6 +19,10 @@ public class ControladorIndex {
 	
 
 	
+	public void setServicioViaje(ServicioViaje servicioViaje) {
+		this.servicioViaje = servicioViaje;
+	}
+
 	@RequestMapping(path="/", method=RequestMethod.GET)
 	public ModelAndView inicio(){
 		
@@ -49,6 +54,7 @@ public class ControladorIndex {
 	}
 	
 	
+
 	
 	
 }
