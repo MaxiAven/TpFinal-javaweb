@@ -23,7 +23,6 @@
       <br/>
       <li role="presentation"><a href="misViajes">Mis viajes</a></li>
         <li role="presentation"><a href="todosLosViajes">Ver Todos los viajes</a></li>
-        <li role="presentation"><a href="#">Algo mas</a></li>
       </ul>
     </div>
     <div class="col-lg-9  menu-lat">
