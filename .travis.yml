@@ -11,3 +11,4 @@ on_failure: always
 
 branch:
 - master
+- prueba2
