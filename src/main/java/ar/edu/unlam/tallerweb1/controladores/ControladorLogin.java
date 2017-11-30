@@ -140,10 +140,7 @@ public class ControladorLogin {
 		return mav;
 	}*/
 
-	@RequestMapping(path = "/home", method = RequestMethod.GET)
-	public ModelAndView irAHome() {
-		return new ModelAndView("home");
-	}
+	
 	
 
 	//Metodo para la carga del traslado 

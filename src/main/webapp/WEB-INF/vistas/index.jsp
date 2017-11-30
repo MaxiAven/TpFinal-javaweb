@@ -34,8 +34,8 @@
     		  	 <!-- div que contiene buscador de sugerencias -->
     		 <div class="col-lg-12 links">
 	    	
-	  			<a href="#" id="btnSug" style="color:#fff"><strong>Buscar sugerencias de destinos</strong></a>
-				<a href="#" id="btnSugOcultar" style="color:#fff"><strong>Ocultar busqueda</strong></a>
+	  			<a href="#" id="btnSug" style="color:#fff; font-size:18px;"><strong>Buscar sugerencias de destinos</strong></a>
+				<a href="#" id="btnSugOcultar" style="color:#fff; font-size:18px;"><strong>Ocultar busqueda</strong></a>
 				<div id="sugerencias">
 				  <form:form action="listaDestino" method="GET">
 					<div class="panel panel-default">

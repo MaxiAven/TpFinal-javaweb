@@ -45,11 +45,6 @@ public class ControladorCargaHospedaje {
 		
 	}
 
-	@RequestMapping(path="/misExperiencias", method=RequestMethod.GET)
-	public ModelAndView misExperiencias(){
-		
 	
-		return new ModelAndView("misExperiencias");
-	}
 	
 }
