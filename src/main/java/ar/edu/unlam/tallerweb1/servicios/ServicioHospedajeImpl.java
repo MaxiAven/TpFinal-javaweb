@@ -12,6 +12,7 @@ import ar.edu.unlam.tallerweb1.dao.HospedajeDao;
 import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 
 
+
 @Service("servicioHospedaje")
 @Transactional
 public class ServicioHospedajeImpl implements ServicioHospedaje{
@@ -45,4 +46,17 @@ public class ServicioHospedajeImpl implements ServicioHospedaje{
 			return servicioHospedajeDao.listarHospedajeEspecifico(id);
 		}
 
+	@Override
+	public Hospedaje consultarHospedajePorId(Long id) {
+		
+		return servicioHospedajeDao.consultarHospedajePorId(id);
+	}
+	
+	@Override
+	public void eliminarHospedaje(Hospedaje hospedaje) {
+		// TODO Auto-generated method stub
+		 servicioHospedajeDao.eliminarHospedaje(hospedaje);
+
+	}
+	
 }

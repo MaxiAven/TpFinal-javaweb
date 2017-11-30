@@ -3,6 +3,8 @@
 <c:if test="${nombre == null}" > 	
 <c:redirect url="/login" /> 
 </c:if>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +31,9 @@
         <h2>Mis Viajes</h2>
     </div>
     
+
+    
+    
    <table class="table table-hover">
     <thead>
       <tr>
@@ -41,6 +46,8 @@
       </tr>
     </thead>
      <c:forEach items="${viaje}" var="v">
+     	
+     	
        <tbody>
       <tr>
         <td>${v.nombre}</td>
@@ -52,13 +59,21 @@
         <form:form action="verDetalles" method="POST" modelAttribute="viaje">
 				<input name="idViaje" id="idViaje" type="hidden" value="${v.idViaje}" size="50" type="text">
 						<input name="nombre" id="nombre" type="hidden" value="${v.nombre}" size="50" type="text">
-				<button type="submit" class="btn btn-default">Ver Detalle</button>
+				<button type="submit" class="btn btn-info">Ver Detalle</button>
+			</form:form></td>
+			<td>
+			 <form:form action="eliminarRegistros" method="POST" modelAttribute="viaje">
+				<input name="idViaje" id="idViaje" type="hidden" value="${v.idViaje}" size="50" type="text">
+				<button type="submit" class="btn btn-danger">Eliminar viaje</button>
 			</form:form>
         
         </td>
       </tr>
+      </c:forEach>
     </tbody>
-    </c:forEach>
+    
+    
+    
   </table>          
 </div>
 </body>

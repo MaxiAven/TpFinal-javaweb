@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
 import ar.edu.unlam.tallerweb1.dao.ViajeDao;
+
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 
 
@@ -65,6 +66,19 @@ public class ServicioViajeImpl implements ServicioViaje{
 	public List<Viaje> listarMayorCalificacion() {
 		
 		return servicioViajeDao.listarMayorCalificacion( );
+	}
+	
+	@Override
+	public Viaje consultarViajePorId(Long id) {
+		
+		return servicioViajeDao.consultarViajePorId(id);
+	}
+	
+	@Override
+	public void eliminarViaje(Viaje viaje1) {
+		// TODO Auto-generated method stub
+		 servicioViajeDao.eliminarViaje(viaje1);
+
 	}
 	
 }

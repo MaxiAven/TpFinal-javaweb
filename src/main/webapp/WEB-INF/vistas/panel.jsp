@@ -27,7 +27,7 @@
 		</div>
 		<div class="col-lg-9  menu-lat">
 		 <div class="page-header">
-  			<h2>Bienvenido a Manejate.com! Este es su panel personal</h2>
+  			<h2>Ha eliminado su viaje con éxito!</h2>
   			
 		</div>
 		</div>

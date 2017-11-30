@@ -10,4 +10,6 @@ public interface ServicioHospedaje {
 		public List<Hospedaje> listarTipoHospedaje();
 		public Hospedaje consultarUltimoRegistroDeHospedaje();
 		public List<Hospedaje> listarHospedajeEspecifico(Long id);
+		public Hospedaje consultarHospedajePorId(Long id);
+		void eliminarHospedaje(Hospedaje hospedaje);
 }

@@ -8,10 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.unlam.tallerweb1.dao.TransporteDao;
-
-
-
-
+import ar.edu.unlam.tallerweb1.modelo.Hospedaje;
 import ar.edu.unlam.tallerweb1.modelo.Transporte;
 
 
@@ -64,6 +61,13 @@ public class ServicioTransporteImp implements ServicioTransporte{
 public List<Transporte> listarTransporteEspecifico(Long id){
 		
 		return servicioTransporteDao.listarTransporteEspecifico(id);
+	}
+	
+	@Override
+	public void eliminarTransporte(Transporte transporte) {
+		// TODO Auto-generated method stub
+		 servicioTransporteDao.eliminarTransporte(transporte);
+
 	}
 	
 }

@@ -13,5 +13,6 @@ public interface ServicioTransporte {
 	public List<Transporte> listarTipoTransporte();
 	public Transporte consultarUltimoRegistroDeTransporte();
 	public List<Transporte> listarTransporteEspecifico(Long id);
+	void eliminarTransporte(Transporte transporte);
 
 }

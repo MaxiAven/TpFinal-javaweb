@@ -4,8 +4,6 @@ package ar.edu.unlam.tallerweb1.dao;
 
 import java.util.List;
 
-
-
 import ar.edu.unlam.tallerweb1.modelo.Transporte;
 
 public interface TransporteDao {
@@ -22,6 +20,7 @@ public interface TransporteDao {
 	
 	public Transporte consultarUltimoRegistroDeTransporte();
 	public List<Transporte> listarTransporteEspecifico(Long id);
+	void eliminarTransporte(Transporte transporte);
 
 }
 

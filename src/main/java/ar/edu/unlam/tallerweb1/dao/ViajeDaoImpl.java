@@ -12,7 +12,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import ar.edu.unlam.tallerweb1.modelo.Usuario;
+
 import ar.edu.unlam.tallerweb1.modelo.Viaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioLogin;
 
@@ -116,5 +116,25 @@ public class ViajeDaoImpl implements ViajeDao{
 				.setMaxResults(5).list();
 	}
 	
+	@Override
+	public Viaje consultarViajePorId(Long id) {
+		final Session sesion = sessionFactory.getCurrentSession();
 
+		return (Viaje) sesion.createCriteria(Viaje.class)
+				.add(Restrictions.eq("id", id))
+				.uniqueResult();
+	}
+	
+	@Override
+	public void eliminarViaje(Viaje viaje1) {
+		final Session sesion = sessionFactory.getCurrentSession();
+
+		//return (Viaje) sesion.createCriteria(Viaje.class)
+
+		
+		Viaje miViaje = (Viaje) sesion.createCriteria(Viaje.class)
+		             .add(Restrictions.eq("id", viaje1.getIdViaje())).uniqueResult();
+		sesion.delete(miViaje);
+
+	}
 }

@@ -27,7 +27,7 @@
 			<ul>
 				<li>Se hospedo en ${lista.getHospedaje().getTipoHospedaje()} "${lista.getHospedaje().getNombre()}"</li>
 				<li>${lista.getHospedaje().getUbicacion()} </li>
-				<li>y nos dice <span class=destacar>"${lista.getHospedaje().getNombre()}"</span></li>
+				<li>y nos dice <span class=destacar>"${lista.getHospedaje().getDescripcion()}"</span></li>
 				<li>el costo del hospedaje fue: ${lista.getHospedaje().getPrecio()} $</li>
 				<li> ${lista.getHospedaje().getNombre()} cuenta con:  ${lista.getHospedaje().getServicios()}</li>
 				<li>por todo esto le da una calificacion al hospedaje de ${lista.getHospedaje().getCalificacion()}/5</li>

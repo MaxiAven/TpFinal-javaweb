@@ -90,5 +90,16 @@ public class TransporteDaoImpl implements TransporteDao{
 		return (List<Transporte>) sesion.createCriteria(Transporte.class)
 				.add(Restrictions.eq("id",id)).list();
 	}
+	
+	@Override
+	public void eliminarTransporte(Transporte transporte) {
+		final Session sesion = sessionFactory.getCurrentSession();
+
+		Transporte miTransporte = (Transporte) sesion.createCriteria(Transporte.class)
+		             .add(Restrictions.eq("id", transporte.getIdTransporte())).uniqueResult();
+		sesion.delete(miTransporte);
+
+			
+	}
 
 }

@@ -84,6 +84,9 @@ public class ControladorLogin {
 		//System.out.println("el id de usuario es"+ id);
 		
 		modelo.put("viaje", listaViaje);
+		
+		
+		
 		return new ModelAndView ("misViajes", modelo);
 		
 		
@@ -108,7 +111,23 @@ public class ControladorLogin {
 		return new ModelAndView ("panelDetalle", modelo);
 	}
 	
+	@RequestMapping(path = "eliminarRegistros")
+	public ModelAndView irAEliminar(@ModelAttribute ("viaje") Viaje viaje, HttpServletRequest request) {
+
+		 
+		Long viajeId = viaje.getIdViaje();
+		//List<Transporte> listaTransporte = servicioTransporte.listarTransporteEspecifico(viajeId);
+		Transporte transporte = servicioTransporte.consultarTransportePorId(viajeId);
+		Hospedaje hospedaje = servicioHospedaje.consultarHospedajePorId(viajeId);
+		Viaje viaje1 = servicioViaje.consultarViajePorId(viajeId);
+		
+		servicioViaje.eliminarViaje(viaje1);
+		servicioTransporte.eliminarTransporte(transporte);
+		servicioHospedaje.eliminarHospedaje(hospedaje);
+
+		return new ModelAndView ("panel");
 	
+	}
 	
 
 	
