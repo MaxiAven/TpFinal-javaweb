@@ -13,6 +13,7 @@
 			<th>Sugerencia Nº 2</th>
 			<th>Sugerencia Nº 3</th>
 			<th>Usuario</th>
+			<th>Ver</th>
 		</tr>
 		<c:forEach items ="${lista}" var= "lista">
 		<tr>
@@ -27,6 +28,7 @@
 		</tr>
 		</c:forEach>
 	</table>
+	<a href="/TpFinal-java/" class="btn btn-primary">Volver a inicio</a>
 	</div>
 	</div>
 	</div>

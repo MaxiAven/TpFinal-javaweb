@@ -5,9 +5,9 @@
 	<head>
 	<!-- Bootstrap core CSS -->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet" >
 		<link href="css/starrr.css" rel="stylesheet" >
 	    <link href="css/bootstrap.min.css" rel="stylesheet" >
-	    <link href="css/style.css" rel="stylesheet" >
 	    <!-- Bootstrap theme -->
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	    <link rel="shortcut icon"  href="img/logo.png"type="image/x-icon" />

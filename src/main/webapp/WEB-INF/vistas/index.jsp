@@ -8,8 +8,8 @@
 </c:if>
 		<div class="container buscador">
 			<div class="col-lg-1"></div>
-			<form:form action="listaResultado" method="GET">
     		<div class="col-lg-10">
+    		<form:form action="listaResultado" method="GET">
     		 <div class="col-lg-7">
     		
     		 	<input type="text"  value=0 class="form-control input-lg" name="precio" id="precio" placeholder="Ingresa tu presupuesto (ej: $1000)">
@@ -28,59 +28,56 @@
     		 <div class="col-lg-2">
     		 	<input type="submit" class="btn btn-default btn-lg" value="Buscar">
     		 </div>
-    	
-    		</div>
-    		</form:form>
-
-
-    		<div class="col-lg-1"></div>
+    		 </form:form>
+    		 
     		
-	    			<div class="col-lg-10">
-	    			<div class="col-lg-1"></div>
-	    		
-	  					<a href="#" id="btnSug">Buscar sugerencias de destinos</a>
-						<a href="#" id="btnSugOcultar">Ocultar busqueda</a>
-						<div id="sugerencias">
-							<form:form action="listaDestino" method="GET">
-								<div class="col-lg-10">
-									<div class="col-lg-1"></div>
-										<div class="col-lg-9">
-											<h3>Busca las mejores referencias de tu destino</h3>
-										</div>
-								</div>	
-					    		<div class="col-lg-10">
-								    <div class="col-lg-1"></div>
-								
-						    		 <div class="col-lg-4">
+    		  	 <!-- div que contiene buscador de sugerencias -->
+    		 <div class="col-lg-12">
+	    	
+	  			<a href="#" id="btnSug" style="color:#fff"><strong>Buscar sugerencias de destinos</strong></a>
+				<a href="#" id="btnSugOcultar" style="color:#fff"><strong>Ocultar busqueda</strong></a>
+				<div id="sugerencias">
+				  <form:form action="listaDestino" method="GET">
+					<div class="panel panel-default">
+						<div class="panel-heading" style="background:#270672">
+							<h3 style="color:#fff">Busca las mejores referencias de tu destino</h3>
+						</div>
+						<div class="panel-body tablaSugerencia">
+							<div class="col-lg-3">
 						    		 
-						    		 	<select class="form-control input-lg" name=lugar>
-						    		 		<option value= >Elegí tu lugar</option>
-						    		 		<option value=playa>Playa</option>
-						    		 		<option value=montana>Montaña</option>
-						    		 		<option value=ciudad>Ciudad</option>
-						    		 		<option value="otros">Otros</option>
-						    		 	</select>
-						    		 </div>
-						    		 <div class="col-lg-2">
-						    		 	<input type="submit" class="btn btn-default btn-lg" value="Buscar">
-						    		 </div>
-					    	
-					    		</div>
-				    		</form:form>
+						<select class="form-control" name=lugar>
+						   <option value= >Elegí tu lugar</option>
+						   <option value=playa>Playa</option>
+						   <option value=montana>Montaña</option>
+						   <option value=ciudad>Ciudad</option>
+						   <option value="otros">Otros</option>
+						</select>
+					</div>
+					<div class="col-lg-2">
+						<input type="submit" class="btn btn-default" value="Buscar">
+				    </div>
 						</div>
 					</div>
-			
-	
-    	
-				<div class="col-lg-10">
-					<div class="col-lg-1"></div>
-					<div class="col-lg-9">
-						<h3>Los 5 viajes con mayor calificación </h3>
-					</div>
+				
+								
+					
+			    </form:form>
 				</div>
-				<div class="col-lg-10">
-				<div class="col-lg-1"></div>
-					<div class="col-lg-10">
+			</div>
+			
+			
+		<!-- fin div que contiene buscador de sugerencias -->
+			<div class="col-lg-12">
+			
+			</div>
+			
+			<div class="col-lg-12">
+			<div class="panel panel-default">
+			 <div class="panel-heading" style="background:#270672">
+				<h3 style="color:#fff">Los 5 viajes con mayor calificación </h3>	
+			</div>
+    		 <div class="panel-body tablaSugerencia">
+    		
 			    		<table class="table table-condensed">
 								<tr>
 									<th>Nombre del Viaje</th>
@@ -101,13 +98,12 @@
 								</c:forEach>
 						</table>
 					</div>
-				</div>	
-			
-    		
-    	</div>
-		
-		
-		
+					</div>
+			</div>
+			<!-- fin panel  -->
+				</div>			    		 
+    </div>
+    	
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>
